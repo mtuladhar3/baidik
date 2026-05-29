@@ -1,0 +1,2673 @@
+:root {
+    --theme-color: #114128;
+    --theme-color2: #b48c37;
+}
+
+
+/* ==========================================================================
+   1. SEPARATE HEADER STYLES (Absolute Positioning Layer)
+   ========================================================================== */
+
+.h-100 {
+    height: 150% !important;
+}
+
+.avorica-header-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    /* Placed over the slider element */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avorica-header-absolute .avorica-logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff !important;
+}
+
+.avorica-logo img {
+    max-width: 140px;
+}
+
+.avorica-header-absolute .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0 16px;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.avorica-header-absolute .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+}
+
+
+/* --- Dropdown Menu Elements --- */
+
+.avorica-header-absolute .avorica-dropdown {
+    position: relative;
+}
+
+
+/* Downward Arrow Icon vector */
+
+.avorica-header-absolute .arrow-indicator {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    margin-left: 6px;
+    vertical-align: baseline;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.85)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+}
+
+
+/* Dropdown Card panel */
+
+.avorica-header-absolute .avorica-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 215px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px 0;
+    margin-top: 15px;
+    list-style: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.avorica-header-absolute .avorica-dropdown-menu li a {
+    display: block;
+    padding: 10px 24px;
+    color: #555555;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.avorica-header-absolute .avorica-dropdown-menu li a:hover {
+    color: #0b172c;
+    background-color: #f8f9fa;
+    padding-left: 28px;
+}
+
+
+/* Desktop Hover Triggers to flip icon and open wrapper */
+
+@media (min-width: 992px) {
+    .avorica-header-absolute .avorica-dropdown:hover .avorica-dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .avorica-header-absolute .avorica-dropdown:hover .arrow-indicator {
+        transform: rotate(-180deg);
+    }
+}
+
+
+/* ==========================================================================
+   2. SEPARATE SLIDER BANNER STYLES
+   ========================================================================== */
+
+.avorica-hero-slider {
+    width: 100%;
+    position: relative;
+}
+
+.avorica-hero-slider .avorica-slide-item {
+    height: 100vh;
+    min-height: 700px;
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.avorica-hero-slider .avorica-title {
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.avorica-hero-slider .avorica-description {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 540px;
+    margin-bottom: 40px;
+}
+
+
+/* ==========================================================================
+   3. BUTTON LAYOUT & SWIPER BULLETS
+   ========================================================================== */
+
+.avorica-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.avorica-btn-outline {
+    background-color: var(--theme-color2);
+    color: #fff !important;
+    border: 1px solid var(--theme-color2);
+}
+
+.avorica-btn-outline:hover {
+    background-color: transparent;
+    color: var(--theme-color2) !important;
+}
+
+.avorica-btn-solid {
+    background-color: var(--theme-color2);
+    color: #fff;
+}
+
+.avorica-btn-solid:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    color: var(--theme-color2);
+}
+
+.avorica-btn-outline:hover .dot {
+    background-color: var(--theme-color2);
+}
+
+.avorica-btn-solid:hover .dot {
+    background-color: var(--theme-color2);
+}
+
+.dot,
+.dot-dark {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 15px;
+    background-color: #fff;
+}
+
+
+/* Swiper Pagination Placement */
+
+.avorica-hero-slider .swiper-pagination-bullet {
+    background: #fff !important;
+    opacity: 0.9;
+}
+
+.avorica-hero-slider .swiper-pagination-bullet-active {
+    background: var(--theme-color2) !important;
+    width: 20px;
+    border-radius: 50px;
+}
+
+
+/* ==========================================================================
+   4. RESPONSIBLE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .avorica-hero-slider .avorica-title {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .avorica-header-absolute {
+        background-color: #0b172c;
+        position: relative;
+        /* Restores flow hierarchy on mobile drawers */
+        padding: 10px;
+    }
+    .avorica-header-absolute .avorica-dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0 0 0 15px;
+        margin: 0;
+    }
+    .avorica-header-absolute .avorica-dropdown-menu li a {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .avorica-hero-slider .avorica-slide-item {
+        height: 80vh;
+        background-position: 75% center;
+    }
+    .avorica-hero-slider .avorica-title {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .avorica-hero-slider .avorica-slide-item {
+        background-image: linear-gradient( to top, rgba(11, 23, 44, 0.95) 60%, rgba(11, 23, 44, 0.5) 100%), url("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1920&auto=format&fit=crop") !important;
+    }
+    .avorica-hero-slider .avorica-title {
+        font-size: 2.1rem;
+    }
+}
+
+
+/* ==========================================================================
+   INTERIORS ABOUT SECTION STYLES
+   ========================================================================== */
+
+.interiors-about-section {
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+
+
+/* --- Pill Badge Tag Style --- */
+
+.interiors-about-section .about-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #1a2a40;
+    /* Dark slate text */
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border: 1px solid #1a2a40;
+    border-radius: 50px;
+    margin-bottom: 24px;
+}
+
+
+/* --- Headline & Paragraph Text --- */
+
+.interiors-about-section .about-headline {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #0f1a24;
+    /* Near black dark color matching layout */
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+    max-width: 520px;
+}
+
+.interiors-about-section .about-description {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #333;
+    /* Muted gray copy text */
+    margin-bottom: 40px;
+}
+
+
+/* --- Rounded Image Boxes Layout Framework --- */
+
+.interiors-about-section .about-img-box {
+    overflow: hidden;
+    position: relative;
+    border-radius: 18px;
+    /* Clean matching image frame rounding */
+    width: 100%;
+}
+
+
+/* Box-Specific Height Constraints matching design scale aspect ratios */
+
+.interiors-about-section .tall-img-box {
+    height: 750px;
+}
+
+.interiors-about-section .wide-img-box {
+    height: 380px;
+}
+
+
+/* Fluid responsive image stretch settings */
+
+.interiors-about-section .main-about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+/* Subtle image hover micro-interaction */
+
+.interiors-about-section .about-img-box:hover .main-about-img {
+    transform: scale(1.03);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE MEDIA BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .interiors-about-section .about-headline {
+        font-size: 2.4rem;
+    }
+    .interiors-about-section .tall-img-box {
+        height: 640px;
+    }
+    .interiors-about-section .wide-img-box {
+        height: 320px;
+    }
+}
+
+@media (max-width: 991px) {
+    .interiors-about-section {
+        padding: 70px 0;
+    }
+    .interiors-about-section .about-headline {
+        font-size: 2.2rem;
+        max-width: 100%;
+    }
+    .interiors-about-section .about-description {
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    .interiors-about-section .tall-img-box {
+        height: 520px;
+    }
+    .interiors-about-section .wide-img-box {
+        height: 340px;
+    }
+}
+
+@media (max-width: 575px) {
+    .interiors-about-section {
+        padding: 50px 0;
+    }
+    .interiors-about-section .about-headline {
+        font-size: 1.8rem;
+    }
+    .interiors-about-section .tall-img-box {
+        height: 400px;
+    }
+    .interiors-about-section .wide-img-box {
+        height: 240px;
+    }
+}
+
+.avorica-feature-grid {
+    padding: 0px 0 70px;
+    background-color: #ffffff;
+}
+
+
+/* Outer card bounding box managing exact corner radius rounding */
+
+.avorica-feature-grid .feature-card-wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    /* Off-white container background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+
+/* Base individual card container */
+
+.avorica-feature-grid .feature-card-item {
+    position: relative;
+    background-color: #F0FBF5;
+    transition: background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.avorica-feature-grid .feature-card-inner {
+    padding: 50px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Structural thin border dividing lines between adjacent modules */
+
+@media (min-width: 1200px) {
+    .avorica-feature-grid .feature-card-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: #e2e5e9;
+        z-index: 2;
+        transition: opacity 0.3s ease;
+    }
+    /* Hide dividing lines when card is colored */
+    .avorica-feature-grid .feature-card-item.active::after,
+    .avorica-feature-grid .feature-card-item:hover::after {
+        opacity: 0;
+    }
+}
+
+
+/* --- Content Typographic Sizing --- */
+
+.avorica-feature-grid .card-stat-number {
+    font-size: 4.5rem;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    transition: color 0.3s ease;
+}
+
+.avorica-feature-grid .card-divider {
+    border: none;
+    border-top: 1px solid #ced4da;
+    margin: 0 0 35px 0;
+    opacity: 1;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.avorica-feature-grid .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.avorica-feature-grid .card-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+
+/* ==========================================================================
+   HOVER & ACTIVE STATES (The Exact Olive Green Card Look)
+   ========================================================================== */
+
+.avorica-feature-grid .feature-card-item.active {
+    background-color: var(--theme-color) !important;
+    /* Premium precise corporate layout green */
+}
+
+
+/* Target color adjustments for typography inside colored cards */
+
+.avorica-feature-grid .feature-card-item.active .card-stat-number,
+.avorica-feature-grid .feature-card-item.active .card-title,
+.avorica-feature-grid .feature-card-item.active .card-description {
+    color: #ffffff !important;
+}
+
+.avorica-feature-grid .feature-card-item.active .card-divider {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT CONSTRAINTS
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .avorica-feature-grid .feature-card-inner {
+        padding: 40px 30px;
+    }
+    .avorica-feature-grid .card-stat-number {
+        font-size: 3.8rem;
+    }
+    /* Simple fallback borders for wrapped tablet presentation grid sizes */
+    .avorica-feature-grid .feature-card-item {
+        border-bottom: 1px solid #e2e5e9;
+    }
+}
+
+@media (max-width: 767px) {
+    .avorica-feature-grid {
+        padding: 60px 0;
+    }
+    .avorica-feature-grid .card-stat-number {
+        font-size: 3.2rem;
+    }
+}
+
+
+/* ==========================================================================
+   MARKETING SERVICES THREE-COLUMN STYLES (EXACT GAP CALIBRATION)
+   ========================================================================== */
+
+.avorica-marketing-services {
+    padding: 70px;
+    /* Deep responsive header padding */
+    background-color: #F0FBF5;
+    /* True matte porcelain background tint */
+    overflow: hidden;
+}
+
+
+/* --- Left Column Elements --- */
+
+.avorica-marketing-services .services-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    /* Fixed, uniform vertical gap between blocks */
+}
+
+.avorica-marketing-services .service-list-item {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+/* Precise Custom Icon Proportions */
+
+.avorica-marketing-services .service-custom-icon {
+    width: 26px;
+    height: 26px;
+    background-color: #000000;
+    margin-bottom: 24px;
+    /* Exact spacing from vector icon to text */
+}
+
+.avorica-marketing-services .icon-crosshair {
+    clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
+}
+
+.avorica-marketing-services .icon-waves {
+    clip-path: polygon(0% 70%, 30% 70%, 30% 40%, 60% 40%, 60% 10%, 90% 10%, 90% 40%, 60% 40%, 60% 70%, 30% 70%, 30% 100%, 0% 100%);
+}
+
+.avorica-marketing-services .icon-arrow-growth {
+    clip-path: polygon(40% 0%, 100% 0%, 100% 60%, 80% 60%, 80% 35%, 25% 90%, 10% 75%, 65% 20%, 40% 20%);
+}
+
+.avorica-marketing-services .service-item-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 12px;
+    /* Tight text relationship */
+    line-height: 1.2;
+}
+
+.avorica-marketing-services .service-item-desc {
+    font-size: 16px;
+    line-height: 1.55;
+    color: #444444;
+    max-width: 350px;
+    margin: 0;
+}
+
+
+/* --- Center Column Element --- */
+
+.avorica-marketing-services .service-display-image-box {
+    width: 100%;
+    max-width: 440px;
+    /* Expands to mirror mock proportions */
+    height: 610px;
+    /* Matches tall aspect ratio */
+    overflow: hidden;
+    border-radius: 28px;
+    /* Smooth card perimeter radius */
+}
+
+.avorica-marketing-services .inner-showcase-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* --- Right Column Pitch Elements --- */
+
+.avorica-marketing-services .services-pitch-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.avorica-marketing-services .service-pitch-headline {
+    font-size: 2.85rem;
+    /* Large, bold title structure */
+    font-weight: 700;
+    line-height: 1.15;
+    color: #000000;
+    margin-bottom: 70px;
+    /* Big gap breakdown block separating title and summary text */
+    letter-spacing: -1.2px;
+    max-width: 460px;
+}
+
+.avorica-marketing-services .service-pitch-desc {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #444444;
+    margin-bottom: 28px;
+    /* Gap layout spacing sitting perfectly over orange button */
+    max-width: 360px;
+}
+
+
+/* Main custom deep rust orange CTA button */
+
+.avorica-marketing-services .service-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #c92502;
+    /* Flat high contrast layout vermillion-orange color */
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 32px;
+    border-radius: 10px;
+    /* Boxier widget button shape matching image layout */
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.avorica-marketing-services .service-cta-btn:hover {
+    background-color: #b01f01;
+    transform: translateY(-1px);
+}
+
+.avorica-marketing-services .cta-arrow-diagonal {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+
+/* ==========================================================================
+   STRICT RESPONSIVE LAYOUT GAP ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 1399px) {
+    .avorica-marketing-services .service-pitch-headline {
+        font-size: 2.4rem;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .avorica-marketing-services {
+        padding: 90px 0;
+    }
+    .avorica-marketing-services .services-list-wrapper {
+        gap: 35px;
+    }
+    .avorica-marketing-services .service-pitch-headline {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .avorica-marketing-services .service-display-image-box {
+        height: 520px;
+    }
+}
+
+@media (max-width: 991px) {
+    .avorica-marketing-services .services-list-wrapper {
+        gap: 40px;
+        margin-bottom: 20px;
+    }
+    .avorica-marketing-services .service-display-image-box {
+        max-width: 100%;
+        height: 550px;
+        margin: 15px 0;
+    }
+    .avorica-marketing-services .service-pitch-headline {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .avorica-marketing-services .service-item-desc,
+    .avorica-marketing-services .service-pitch-desc {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .avorica-marketing-services {
+        padding: 60px 0;
+    }
+    .avorica-marketing-services .service-pitch-headline {
+        font-size: 1.75rem;
+    }
+    .avorica-marketing-services .service-display-image-box {
+        height: 390px;
+    }
+}
+
+
+/* ==========================================================================
+   SOLUTIONS REVISED LAYOUT CLEAN SYSTEM
+   ========================================================================== */
+
+.avorica-solutions-revised {
+    padding: 70px 0;
+}
+
+
+/* --- Row Spacing Framework --- */
+
+.avorica-solutions-revised .header-split-gap {
+    margin-bottom: 80px;
+    /* Precise gap between top header row and content layout */
+}
+
+
+/* --- Top Row Elements --- */
+
+.avorica-solutions-revised .solutions-revised-headline {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #000000;
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+.avorica-solutions-revised .solutions-header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.avorica-solutions-revised .solutions-revised-desc {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0;
+}
+
+
+/* Custom Vermillion Orange CTA Button */
+
+.avorica-solutions-revised .solutions-revised-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #c92502;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.25s ease;
+}
+
+.avorica-solutions-revised .solutions-revised-btn:hover {
+    background-color: #b01f01;
+}
+
+.avorica-solutions-revised .cta-arrow-diagonal {
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+
+/* --- Bottom Row Left Side Image Module --- */
+
+.avorica-solutions-revised .dynamic-media-container {
+    width: 100%;
+    max-width: 460px;
+    /* Elegant landscape canvas size */
+    height: 310px;
+    overflow: hidden;
+    border-radius: 24px;
+    /* Clean corner radius treatment */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.avorica-solutions-revised .media-swap-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.02);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.avorica-solutions-revised .media-swap-asset.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+
+/* --- Bottom Row Right Side Menu Stack --- */
+
+.avorica-solutions-revised .solutions-revised-menu {
+    width: 100%;
+}
+
+.avorica-solutions-revised .menu-revised-row {
+    border-bottom: 1px solid #e2deda;
+    padding: 24px 0;
+    cursor: pointer;
+    color: #9c9995;
+    /* Non-active color preset */
+    transition: color 0.3s ease;
+}
+
+.avorica-solutions-revised .menu-flex-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.avorica-solutions-revised .menu-index {
+    font-size: 18px;
+    font-weight: 500;
+    width: 50px;
+    /* Prevents text alignment wobble */
+}
+
+
+/* Container containing the inline heading text + dynamic line accent underneath */
+
+.avorica-solutions-revised .menu-heading-wrapper {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.avorica-solutions-revised .menu-heading-text {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    transition: font-weight 0.3s ease;
+    width: fit-content;
+}
+
+.avorica-solutions-revised .menu-chevron {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+
+/* --- Underline Active Tracker System --- */
+
+.avorica-solutions-revised .menu-indicator-line {
+    position: absolute;
+    bottom: -8px;
+    /* Spaces nicely right under title text */
+    left: 0;
+    width: 32px;
+    /* Set layout block dimension */
+    height: 3px;
+    background-color: #c92502;
+    /* Red accent color indicator line */
+    border-radius: 4px;
+    opacity: 0;
+    transform: scaleX(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* ACTIVE STATE ENGINE FOR SELECTED ITEM */
+
+.avorica-solutions-revised .menu-revised-row.active {
+    color: #000000;
+    /* Turns high contrast black */
+}
+
+.avorica-solutions-revised .menu-revised-row.active .menu-heading-text {
+    font-weight: 700;
+    /* Bold focus toggle */
+}
+
+.avorica-solutions-revised .menu-revised-row.active .menu-indicator-line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.avorica-solutions-revised .menu-revised-row:hover .menu-chevron {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE CLEAN CALIBRATIONS
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .avorica-solutions-revised .solutions-revised-headline {
+        font-size: 2.6rem;
+    }
+    .avorica-solutions-revised .menu-heading-text {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 991px) {
+    .avorica-solutions-revised {
+        padding: 70px 0;
+    }
+    .avorica-solutions-revised .header-split-gap {
+        margin-bottom: 40px;
+    }
+    .avorica-solutions-revised .dynamic-media-container {
+        max-width: 100%;
+        height: 260px;
+        margin-bottom: 30px;
+    }
+    .avorica-solutions-revised .menu-revised-row {
+        padding: 18px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .avorica-solutions-revised .solutions-revised-headline {
+        font-size: 1.9rem;
+    }
+    .avorica-solutions-revised .menu-heading-text {
+        font-size: 16px;
+    }
+    .avorica-solutions-revised .menu-index {
+        width: 35px;
+        font-size: 15px;
+    }
+}
+
+
+/* ==========================================================================
+   PURE CSS REVISED LAYOUT DESIGN SYSTEM
+   ========================================================================== */
+
+.avorica-pure-css-solutions {
+    padding: 70px 0;
+}
+
+.avorica-pure-css-solutions .header-split-gap {
+    margin-bottom: 80px;
+}
+
+
+/* --- Top Row Typography & CTA --- */
+
+.avorica-pure-css-solutions .solutions-revised-headline {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #000000;
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+.avorica-pure-css-solutions .solutions-header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.avorica-pure-css-solutions .solutions-revised-desc {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0;
+}
+
+.avorica-pure-css-solutions .solutions-revised-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #c92502;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.25s ease;
+}
+
+.avorica-pure-css-solutions .solutions-revised-btn:hover {
+    background-color: #b01f01;
+}
+
+.avorica-pure-css-solutions .cta-arrow-diagonal {
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+
+/* --- Bottom Left Image Frame Canvas --- */
+
+.avorica-pure-css-solutions .dynamic-media-container {
+    width: 100%;
+    max-width: 460px;
+    height: 310px;
+    overflow: hidden;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.avorica-pure-css-solutions .media-swap-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.02);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+
+/* --- Bottom Right Interactive Menu Stack --- */
+
+.avorica-pure-css-solutions .menu-revised-row {
+    border-bottom: 1px solid #e2deda;
+    padding: 24px 0;
+    cursor: pointer;
+    position: relative;
+    /* Default Initial State for rows: Muted Gray */
+    color: #9c9995;
+    transition: color 0.3s ease;
+}
+
+.avorica-pure-css-solutions .menu-flex-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.avorica-pure-css-solutions .menu-index {
+    font-size: 18px;
+    font-weight: 500;
+    width: 50px;
+}
+
+.avorica-pure-css-solutions .menu-heading-wrapper {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.avorica-pure-css-solutions .menu-heading-text {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    transition: font-weight 0.3s ease;
+    width: fit-content;
+}
+
+.avorica-pure-css-solutions .menu-chevron {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Red Underline Indicator Base Track */
+
+.avorica-pure-css-solutions .menu-indicator-line {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 32px;
+    height: 3px;
+    background-color: #c92502;
+    border-radius: 4px;
+    opacity: 0;
+    transform: scaleX(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* ==========================================================================
+   PURE CSS ENGINE: DEFAULT ACTIVE STATE (ITEM 01)
+   ========================================================================== */
+
+
+/* When the container is NOT hovered, Item 01 defaults to active black & image 1 is visible */
+
+.avorica-pure-css-solutions .css-hover-scope:not(:hover) .img-01 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.avorica-pure-css-solutions .css-hover-scope:not(:hover) .item-row-01 {
+    color: #000000;
+}
+
+.avorica-pure-css-solutions .css-hover-scope:not(:hover) .item-row-01 .menu-heading-text {
+    font-weight: 700;
+}
+
+.avorica-pure-css-solutions .css-hover-scope:not(:hover) .item-row-01 .menu-indicator-line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+/* ==========================================================================
+   PURE CSS ENGINE: HOVER CONTROLS (SWAPPING LAYERS)
+   ========================================================================== */
+
+
+/* --- HOVER ITEM 01 --- */
+
+.avorica-pure-css-solutions .item-row-01:hover {
+    color: #000000;
+}
+
+.avorica-pure-css-solutions .item-row-01:hover .menu-heading-text {
+    font-weight: 700;
+}
+
+.avorica-pure-css-solutions .item-row-01:hover .menu-indicator-line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.avorica-pure-css-solutions .css-hover-scope:has(.item-row-01:hover) .img-01 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 3;
+}
+
+
+/* --- HOVER ITEM 02 --- */
+
+.avorica-pure-css-solutions .item-row-02:hover {
+    color: #000000;
+}
+
+.avorica-pure-css-solutions .item-row-02:hover .menu-heading-text {
+    font-weight: 700;
+}
+
+.avorica-pure-css-solutions .item-row-02:hover .menu-indicator-line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.avorica-pure-css-solutions .css-hover-scope:has(.item-row-02:hover) .img-02 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 3;
+}
+
+
+/* --- HOVER ITEM 03 --- */
+
+.avorica-pure-css-solutions .item-row-03:hover {
+    color: #000000;
+}
+
+.avorica-pure-css-solutions .item-row-03:hover .menu-heading-text {
+    font-weight: 700;
+}
+
+.avorica-pure-css-solutions .item-row-03:hover .menu-indicator-line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.avorica-pure-css-solutions .css-hover-scope:has(.item-row-03:hover) .img-03 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 3;
+}
+
+
+/* --- HOVER ITEM 04 --- */
+
+.avorica-pure-css-solutions .item-row-04:hover {
+    color: #000000;
+}
+
+.avorica-pure-css-solutions .item-row-04:hover .menu-heading-text {
+    font-weight: 700;
+}
+
+.avorica-pure-css-solutions .item-row-04:hover .menu-indicator-line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.avorica-pure-css-solutions .css-hover-scope:has(.item-row-04:hover) .img-04 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 3;
+}
+
+
+/* --- HOVER ITEM 05 --- */
+
+.avorica-pure-css-solutions .item-row-05:hover {
+    color: #000000;
+}
+
+.avorica-pure-css-solutions .item-row-05:hover .menu-heading-text {
+    font-weight: 700;
+}
+
+.avorica-pure-css-solutions .item-row-05:hover .menu-indicator-line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.avorica-pure-css-solutions .css-hover-scope:has(.item-row-05:hover) .img-05 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 3;
+}
+
+
+/* Minimal icon micro-interaction */
+
+.avorica-pure-css-solutions .menu-revised-row:hover .menu-chevron {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE CLEAN CALIBRATIONS
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .avorica-pure-css-solutions .solutions-revised-headline {
+        font-size: 2.6rem;
+    }
+    .avorica-pure-css-solutions .menu-heading-text {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 991px) {
+    .avorica-pure-css-solutions {
+        padding: 70px 0;
+    }
+    .avorica-pure-css-solutions .header-split-gap {
+        margin-bottom: 40px;
+    }
+    .avorica-pure-css-solutions .dynamic-media-container {
+        max-width: 100%;
+        height: 260px;
+        margin-bottom: 30px;
+    }
+    .avorica-pure-css-solutions .menu-revised-row {
+        padding: 18px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .avorica-pure-css-solutions .solutions-revised-headline {
+        font-size: 1.9rem;
+    }
+    .avorica-pure-css-solutions .menu-heading-text {
+        font-size: 16px;
+    }
+    .avorica-pure-css-solutions .menu-index {
+        width: 35px;
+        font-size: 15px;
+    }
+}
+
+
+/* ==========================================================================
+   AVORICA SOLUTIONS CUSTOM DESIGN ENGINE
+   ========================================================================== */
+
+.avorica-mkt-solutions-section {
+    padding: 120px 0;
+    background-color: #FAF8F5;
+    /* Matches exact modern soft-cream matte backdrop */
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* --- Upper Grid Spacing Matrix --- */
+
+.avorica-mkt-solutions-section .mkt-header-spacer {
+    margin-bottom: 90px;
+}
+
+.avorica-mkt-solutions-section .mkt-solutions-main-title {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.12;
+    color: #000000;
+    letter-spacing: -1.8px;
+    margin: 0;
+    max-width: 650px;
+}
+
+.avorica-mkt-solutions-section .mkt-solutions-header-right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 10px;
+}
+
+.avorica-mkt-solutions-section .mkt-solutions-short-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0;
+    max-width: 440px;
+}
+
+
+/* --- Brand Dynamic Button Config (#114128 Override) --- */
+
+.avorica-mkt-solutions-section .mkt-explore-brand-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #114128;
+    /* Exact custom requested brand deep green */
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 6px;
+    transition: background-color 0.25s ease, opacity 0.2s ease;
+}
+
+.avorica-mkt-solutions-section .mkt-explore-brand-btn:hover {
+    background-color: #0d331f;
+}
+
+.avorica-mkt-solutions-section .mkt-diagonal-icon {
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+
+/* --- Left Column Dynamic Media Frame System --- */
+
+.avorica-mkt-solutions-section .mkt-dynamic-media-frame {
+    width: 100%;
+    max-width: 470px;
+    /* Replicates exact balanced landscape proportions */
+    height: 315px;
+    overflow: hidden;
+    border-radius: 28px;
+    /* Smooth professional corner rounding */
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.02);
+}
+
+.avorica-mkt-solutions-section .mkt-swap-image-node {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.03);
+    transition: opacity 0.45s ease, visibility 0.45s ease, transform 0.45s ease;
+}
+
+.avorica-mkt-solutions-section .mkt-swap-image-node.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+
+/* --- Right Column Typography Row Navigation --- */
+
+.avorica-mkt-solutions-section .mkt-solutions-list-group {
+    width: 100%;
+}
+
+.avorica-mkt-solutions-section .mkt-solution-row-card {
+    border-bottom: 1px solid #E4E0DB;
+    /* Soft geometric partition divider */
+    padding: 26px 0;
+    cursor: pointer;
+    color: #A3A09C;
+    /* Clean editorial non-active tone */
+    transition: color 0.3s ease;
+}
+
+.avorica-mkt-solutions-section .mkt-row-flex-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.avorica-mkt-solutions-section .mkt-row-number-id {
+    font-size: 19px;
+    font-weight: 500;
+    width: 60px;
+    /* Keeps column numbers aligned */
+}
+
+.avorica-mkt-solutions-section .mkt-row-content-anchor {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.avorica-mkt-solutions-section .mkt-row-title-text {
+    font-size: 23px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    transition: font-weight 0.3s ease, color 0.3s ease;
+    width: fit-content;
+}
+
+.avorica-mkt-solutions-section .mkt-row-action-arrow {
+    font-size: 19px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+/* --- Line Tracker Indicator (#114128 Green) --- */
+
+.avorica-mkt-solutions-section .mkt-row-active-indicator-bar {
+    position: absolute;
+    bottom: -8px;
+    /* Suspended precisely beneath font base baseline */
+    left: 0;
+    width: 36px;
+    height: 3px;
+    background-color: #114128;
+    /* Green active status highlight */
+    border-radius: 20px;
+    opacity: 0;
+    transform: scaleX(0.7);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* --- ACTIVE HOVER LOGIC SPECIFICATION --- */
+
+.avorica-mkt-solutions-section .mkt-solution-row-card.active {
+    color: #000000;
+}
+
+.avorica-mkt-solutions-section .mkt-solution-row-card.active .mkt-row-title-text {
+    font-weight: 700;
+    /* Distinct bold style mutation */
+}
+
+.avorica-mkt-solutions-section .mkt-solution-row-card.active .mkt-row-active-indicator-bar {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+/* Horizontal slide micro-interaction on arrow icon */
+
+.avorica-mkt-solutions-section .mkt-solution-row-card:hover .mkt-row-action-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================================
+   STRICT DATA BREAKPOINT LAYOUT ADAPTABILITY
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .avorica-mkt-solutions-section .mkt-solutions-main-title {
+        font-size: 2.75rem;
+    }
+    .avorica-mkt-solutions-section .mkt-row-title-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .avorica-mkt-solutions-section {
+        padding: 80px 0;
+    }
+    .avorica-mkt-solutions-section .mkt-header-spacer {
+        margin-bottom: 45px;
+    }
+    .avorica-mkt-solutions-section .mkt-dynamic-media-frame {
+        max-width: 100%;
+        height: 280px;
+        margin-bottom: 35px;
+    }
+    .avorica-mkt-solutions-section .mkt-solution-row-card {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .avorica-mkt-solutions-section .mkt-solutions-main-title {
+        font-size: 2.1rem;
+    }
+    .avorica-mkt-solutions-section .mkt-row-title-text {
+        font-size: 17px;
+    }
+    .avorica-mkt-solutions-section .mkt-row-number-id {
+        width: 40px;
+        font-size: 16px;
+    }
+}
+
+
+/* ==========================================================================
+   AVORICA PARTNERS SECTION DESIGN SYSTEM
+   ========================================================================== */
+
+.avorica-partners-section {
+    background-color: #114128;
+    /* Your beautiful deep forest green background override */
+    padding: 70px 0;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+
+/* --- Upper Header Typography --- */
+
+.avorica-partners-section .partners-upper-tagline {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    /* Soft premium silver tint text */
+    text-transform: none;
+    letter-spacing: -0.2px;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.avorica-partners-section .partners-main-headline {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    letter-spacing: -1.2px;
+    margin: 0;
+    max-width: 600px;
+}
+
+
+/* --- Precision Thin Horizontal Divider --- */
+
+.avorica-partners-section .partners-horizontal-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    /* Sleek translucent boundary trace */
+    margin: 45px 0 65px 0;
+}
+
+
+/* --- Grid Card Architecture --- */
+
+.avorica-partners-section .partners-grid-layout {
+    margin-top: 0;
+}
+
+.avorica-partners-section .partner-logo-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    /* Faint interior depth fill layer */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    /* Ultra crisp micro border outline */
+    border-radius: 24px;
+    /* Smooth rounded grid profile corners */
+    height: 100%;
+    width: 100%;
+    /* Locked geometric scale aspect footprint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    cursor: pointer;
+    transition: background-color 0.35s ease, border-color 0.35s ease, transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+/* Premium Card Interaction States */
+
+.avorica-partners-section .partner-logo-card:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.35);
+    /* Accent highlight pops border luminosity */
+    transform: translateY(-4px);
+    /* Clean floating kinetic feedback */
+}
+
+
+/* --- Typographic Mock Assets Styling Layer --- */
+
+.avorica-partners-section .logo-wrapper {
+    text-align: center;
+    user-select: none;
+}
+
+.avorica-partners-section .mock-logo-text {
+    color: #ffffff;
+    opacity: 0.95;
+    transition: opacity 0.3s ease;
+}
+
+.avorica-partners-section .partner-logo-card:hover .mock-logo-text {
+    opacity: 1.0;
+}
+
+
+/* Individual Brand Typographic Replications */
+
+.avorica-partners-section .type-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.avorica-partners-section .type-sans-bold {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 26px;
+    letter-spacing: -0.5px;
+}
+
+.avorica-partners-section .type-display-elegant {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    line-height: 1.05;
+    font-weight: 500;
+}
+
+.avorica-partners-section .type-spaced-subtle {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.avorica-partners-section .type-spaced-subtle small {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.avorica-partners-section .type-geometric-lines {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-decoration: underline double;
+}
+
+.avorica-partners-section .type-tech-modern {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT CALIBRATIONS
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .avorica-partners-section .partners-main-headline {
+        font-size: 2.3rem;
+    }
+    .avorica-partners-section .partner-logo-card {
+        height: 220px;
+    }
+}
+
+@media (max-width: 991px) {
+    .avorica-partners-section {
+        padding: 80px 0;
+    }
+    .avorica-partners-section .partners-horizontal-divider {
+        margin: 35px 0 45px 0;
+    }
+    .avorica-partners-section .partner-logo-card {
+        height: 200px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .avorica-partners-section .partners-main-headline {
+        font-size: 1.85rem;
+    }
+    .avorica-partners-section .partner-logo-card {
+        height: 180px;
+    }
+}
+
+
+/* ==========================================================================
+   AVORICA BLOG & INSIGHTS GRID LAYOUT SYSTEM
+   ========================================================================== */
+
+.avorica-insights-section {
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+
+
+/* --- Section Top Row Spacing --- */
+
+.avorica-insights-section .insights-header-gap {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #EAE6DF;
+    /* Precision separation boundary trace line */
+    padding-bottom: 24px;
+}
+
+
+/* --- Tagline and Headings --- */
+
+.avorica-insights-section .insights-tag-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.avorica-insights-section .insights-dot-marker {
+    width: 6px;
+    height: 6px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.avorica-insights-section .insights-pre-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #555555;
+    text-transform: uppercase;
+}
+
+.avorica-insights-section .insights-main-headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111111;
+    letter-spacing: -1.2px;
+    margin: 0;
+}
+
+
+/* --- Rounded Editorial Pill Button --- */
+
+.avorica-insights-section .insights-view-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C2D42;
+    /* Matte dark slate/navy tone matching original */
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 30px;
+    /* Fully rounded capsule container shape */
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.avorica-insights-section .insights-view-more-btn:hover {
+    background-color: #121F2E;
+    transform: translateY(-1px);
+}
+
+.avorica-insights-section .insights-btn-dot {
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* --- Card Framework Structures --- */
+
+.avorica-insights-section .insights-article-card {
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.avorica-insights-section .insights-thumbnail-frame {
+    width: 100%;
+    height: 255px;
+    /* Fixed viewport profile size matching exact photo array ratio */
+    overflow: hidden;
+    border-radius: 18px;
+    /* Clean rounded card framework edges */
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.avorica-insights-section .insights-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+
+/* Smooth zoom on container hover */
+
+.avorica-insights-section .insights-article-card:hover .insights-card-img {
+    transform: scale(1.04);
+}
+
+
+/* --- Card Text & Meta Blocks --- */
+
+.avorica-insights-section .insights-meta-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: #777777;
+}
+
+.avorica-insights-section .insights-calendar-icon {
+    display: flex;
+    align-items: center;
+    color: #777777;
+}
+
+.avorica-insights-section .insights-date-stamp {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.avorica-insights-section .insights-article-title {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.4px;
+    margin: 0;
+}
+
+.avorica-insights-section .insights-title-link {
+    color: #111111 !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.avorica-insights-section .insights-article-card:hover .insights-title-link {
+    color: #1C2D42 !important;
+    /* Subtle interactive text change */
+}
+
+
+/* ==========================================================================
+   STRICT BREAKPOINT MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .avorica-insights-section .insights-main-headline {
+        font-size: 2.1rem;
+    }
+    .avorica-insights-section .insights-thumbnail-frame {
+        height: 220px;
+    }
+    .avorica-insights-section .insights-article-title {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 991px) {
+    .avorica-insights-section {
+        padding: 80px 0;
+    }
+    .avorica-insights-section .insights-main-headline {
+        font-size: 1.85rem;
+    }
+    .avorica-insights-section .insights-header-gap {
+        margin-bottom: 35px;
+        padding-bottom: 15px;
+    }
+    .avorica-insights-section .insights-thumbnail-frame {
+        height: 240px;
+    }
+}
+
+@media (max-width: 575px) {
+    .avorica-insights-section .insights-main-headline {
+        font-size: 1.6rem;
+    }
+    .avorica-insights-section .insights-thumbnail-frame {
+        height: 200px;
+        border-radius: 14px;
+    }
+    .avorica-insights-section .insights-article-title {
+        font-size: 16px;
+    }
+}
+
+
+/* ==========================================================================
+   AVORICA VIDEO SHOWCASE & FLOATING METRICS SYSTEM
+   ========================================================================== */
+
+.fin-parallax-showcase {
+    position: relative;
+    width: 100%;
+    /* Double padding layout footprint provides extreme bottom leeway for cards overlay space overflow */
+    padding: 120px 0 160px 0;
+    /* Strict Functional Specification: Static fixed perspective picture frame viewport behavior */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1600&auto=format&fit=crop');
+    background-attachment: fixed;
+    /* Anchors the background asset firmly to the background while text scrolls */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    overflow: visible;
+}
+
+
+/* --- Container Outer Radii Frame Setup --- */
+
+.fin-parallax-showcase .fin-showcase-container {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* --- Miniature Top Tag Badge Pill --- */
+
+.fin-parallax-showcase .fin-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.fin-parallax-showcase .fin-badge-asterisk {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+/* --- Main Typography Blocks --- */
+
+.fin-parallax-showcase .fin-showcase-heading {
+    color: #ffffff;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.fin-parallax-showcase .fin-showcase-description {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   INTERACTIVE ROTATING CIRCULAR PLAY BUTTON DESIGN ELEMENT
+   ========================================================================== */
+
+.fin-parallax-showcase .fin-video-play-ring {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fin-parallax-showcase .fin-video-play-ring:hover {
+    transform: scale(1.08);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Arrow Vector Shape Core */
+
+.fin-parallax-showcase .fin-play-arrow-core {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 14px solid #ffffff;
+    margin-left: 4px;
+    z-index: 3;
+}
+
+
+/* Typography Badge Path Engine Configuration */
+
+.fin-parallax-showcase .fin-rotating-svg-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: finSpinRotationEngine 14s linear infinite;
+}
+
+.fin-parallax-showcase .fin-rotating-svg-text text {
+    font-size: 9.5px;
+    fill: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+@keyframes finSpinRotationEngine {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================================================
+   FLOATING METRIC WHITE CARDS SPECS MATRIX (OVERLAPS SECTION BREAK)
+   ========================================================================== */
+
+.fin-parallax-showcase .fin-absolute-cards-row {
+    margin-top: 70px;
+}
+
+.fin-parallax-showcase .fin-metric-white-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    /* Matches the clean rounded card profiles */
+    padding: 32px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fin-parallax-showcase .fin-metric-white-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Card Icons Setup */
+
+.fin-parallax-showcase .fin-card-icon-sphere {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.fin-parallax-showcase .bg-blue-variant {
+    background-color: #2563EB;
+    color: #ffffff;
+}
+
+.fin-parallax-showcase .bg-blue-variant-two {
+    background-color: #3B82F6;
+    color: #ffffff;
+}
+
+.fin-parallax-showcase .bg-dark-variant {
+    background-color: #0F172A;
+    color: #ffffff;
+}
+
+.fin-parallax-showcase .fin-card-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 28px;
+}
+
+
+/* Giant Counter Metrics Text Blocks Split Grid Layout */
+
+.fin-parallax-showcase .fin-metric-split-block {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.fin-parallax-showcase .fin-giant-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111111;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.fin-parallax-showcase .fin-giant-number sup {
+    font-size: 1.6rem;
+    top: -0.4em;
+    font-weight: 700;
+}
+
+.fin-parallax-showcase .fin-sub-metric-text {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #666666;
+    margin: 0;
+    padding-bottom: 2px;
+}
+
+
+/* ==========================================================================
+   STRICT RESPONSIBILITY CALIBRATIONS & MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+    .fin-parallax-showcase .fin-showcase-heading {
+        font-size: 2.75rem;
+    }
+    .fin-parallax-showcase .fin-metric-white-card {
+        padding: 24px;
+    }
+    .fin-parallax-showcase .fin-giant-number {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Disable parallax attachment vector state safely on mobile Viewports to assure smooth touch scroll */
+    .fin-parallax-showcase {
+        background-attachment: scroll;
+        padding: 80px 0 100px 0;
+    }
+    .fin-parallax-showcase .fin-showcase-heading {
+        font-size: 2.25rem;
+    }
+    .fin-parallax-showcase .fin-content-top-row {
+        margin-bottom: 20px;
+    }
+    .fin-parallax-showcase .fin-absolute-cards-row {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .fin-parallax-showcase .fin-showcase-heading {
+        font-size: 1.85rem;
+        letter-spacing: -1px;
+    }
+    .fin-parallax-showcase .fin-metric-white-card {
+        border-radius: 18px;
+        padding: 24px;
+    }
+    .fin-parallax-showcase .fin-metric-split-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .fin-parallax-showcase .fin-sub-metric-text {
+        padding-bottom: 0;
+    }
+}
+
+.opt-brand-footer-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 70px 0 10px 0;
+    /* Dual Layer Engine: Deep dark-navy mask blended seamlessly over your green texture image */
+    background-image: linear-gradient(to bottom, rgba(9, 44, 24, 0.96), rgba(5, 14, 5, 0.98)), url('footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.opt-brand-footer-wrapper .opt-footer-container {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* --- Giant Background Typography Styling --- */
+
+.opt-brand-footer-wrapper .opt-giant-hero-typography-row {
+    margin-bottom: 70px;
+    user-select: none;
+}
+
+.opt-brand-footer-wrapper .opt-backplate-title {
+    font-size: 20vw;
+    /* Perfectly adapts letter-scale across varying browser screens */
+    font-weight: 800;
+    margin: 0;
+    line-height: 0.8;
+    text-transform: uppercase;
+    /* Linear gradient mask creating the sharp silver metallic sheen gradient look */
+    background: linear-gradient(to bottom, #ffffff 20%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.9;
+}
+
+
+/* --- Directory Matrix Rows & Structural Content --- */
+
+.opt-brand-footer-wrapper .opt-directory-links-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 60px;
+    margin-bottom: 10px;
+}
+
+.opt-brand-footer-wrapper .opt-brand-philosophy-text {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #9ca3af;
+    /* Crisp elegant muted platinum gray */
+    margin-bottom: 32px;
+    max-width: 340px;
+}
+
+.opt-brand-footer-wrapper .opt-section-sub-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.opt-brand-footer-wrapper .opt-address-paragraph {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #9ca3af;
+    margin: 0;
+}
+
+
+/* --- Columns Headers & Navigation Links --- */
+
+.opt-brand-footer-wrapper .opt-section-column-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.opt-brand-footer-wrapper .opt-footer-links-list li {
+    margin-bottom: 4px;
+}
+
+.opt-brand-footer-wrapper .opt-footer-anchor {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.opt-brand-footer-wrapper .opt-footer-anchor:hover {
+    color: #ffffff;
+    transform: translateX(2px);
+}
+
+
+/* --- Interactive Newsletter Components --- */
+
+.opt-brand-footer-wrapper .opt-newsletter-explainer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #9ca3af;
+    margin-bottom: 20px;
+    max-width: 320px;
+}
+
+.opt-brand-footer-wrapper .opt-custom-email-input {
+    background-color: #ffffff !important;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 24px;
+    font-size: 14px;
+    color: #111111 !important;
+    box-shadow: none;
+}
+
+.opt-brand-footer-wrapper .opt-custom-email-input::placeholder {
+    color: #71717a;
+}
+
+
+/* Action Capsule Button Styles */
+
+.opt-brand-footer-wrapper .opt-subscribe-action-pill {
+    background-color: #1d4ed8;
+    /* Vibrant Royal Blue CTA fill */
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 12px 10px 24px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.opt-brand-footer-wrapper .opt-subscribe-action-pill:hover {
+    background-color: #1e40af;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.opt-brand-footer-wrapper .opt-cta-arrow-sphere {
+    width: 28px;
+    height: 28px;
+    background-color: #ffffff;
+    color: #1d4ed8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --- Lower Utility & Social Badges Panel --- */
+
+.opt-brand-footer-wrapper .opt-copyright-disclaimer-text {
+    font-size: 13.5px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.opt-brand-footer-wrapper .opt-social-media-icons-row-flex {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 12px;
+}
+
+
+/* Circular Wired Social Badges */
+
+.opt-brand-footer-wrapper .opt-social-circular-badge {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.opt-brand-footer-wrapper .opt-social-circular-badge:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #111111;
+}
+
+
+/* ==========================================================================
+   DYNAMIC RESPONSIVE BREAKPOINT CALIBRATIONS
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    .opt-brand-footer-wrapper .opt-social-media-icons-row-flex {
+        /* justify-content: flex-end; */
+    }
+}
+
+@media (max-width: 991px) {
+    .opt-brand-footer-wrapper {
+        padding: 60px 0 30px 0;
+    }
+    .opt-brand-footer-wrapper .opt-giant-hero-typography-row {
+        margin-bottom: 40px;
+    }
+    .opt-brand-footer-wrapper .opt-directory-links-row {
+        padding-bottom: 40px;
+    }
+    .opt-brand-footer-wrapper .opt-section-column-title {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .opt-brand-footer-wrapper .opt-backplate-title {
+        font-size: 17vw;
+    }
+    .opt-brand-footer-wrapper .opt-links-sub-split-grid {
+        --bs-gutter-x: 0.5rem;
+    }
+    .opt-brand-footer-wrapper .opt-custom-email-input {
+        padding: 12px 20px;
+    }
+    .opt-brand-footer-wrapper .opt-subscribe-action-pill {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+/* --- 3-Column Grid Layout Engine --- */
+
+.opt-links-three-column-grid .opt-footer-links-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Allocates 3 perfect equal columns */
+    gap: 12px 16px;
+    /* Row gap followed by column gap spacing */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Ensure links don't break wraps awkwardly on smaller screens */
+
+.opt-links-three-column-grid .opt-footer-anchor {
+    white-space: nowrap;
+}
+
+
+/* --- Responsive Adaptability Query --- */
+
+@media (max-width: 480px) {
+    .opt-links-three-column-grid .opt-footer-links-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Gracefully drops to 2 columns on very narrow screens */
+    }
+}
+
+
+/* --- Absolute Icon Contact List Frame --- */
+
+.opt-contact-absolute-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Uniform spacing between layout rows */
+}
+
+.opt-contact-absolute-list .opt-contact-item {
+    position: relative;
+    padding-left: 28px;
+    /* Creates explicit safe visual corridor for the absolute icon */
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Forces address block text alignment over multiline wraps cleanly */
+
+.opt-contact-absolute-list .opt-contact-item.item-address {
+    align-items: flex-start;
+}
+
+
+/* --- The Absolute Icon Rule --- */
+
+.opt-contact-absolute-list .opt-icon-abs {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    /* Perfectly aligned to the top text baseline cap-height */
+    font-size: 14px;
+    color: #9ca3af;
+    /* Matches your premium silver-gray palette */
+    width: 16px;
+    text-align: center;
+}
+
+
+/* Adjust center alignment for single-line anchors like phone & email */
+
+.opt-contact-absolute-list .opt-contact-item:not(.item-address) .opt-icon-abs {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* --- Text & Link Typography Styling --- */
+
+.opt-contact-absolute-list .opt-address-paragraph {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.opt-contact-absolute-list .opt-contact-link {
+    font-size: 14px;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.opt-contact-absolute-list .opt-contact-link:hover {
+    color: #ffffff;
+    /* Fades white on interaction states */
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+
+/* Hero Specific Animations (Fades in immediately on page load) */
+.hero-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpOnLoad 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUpOnLoad {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base style for elements hidden before scroll */
+.reveal-element {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
+}
+
+/* Direction variations */
+.reveal-up {
+    transform: translateY(40px);
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+/* The structural dynamic class triggered via JavaScript JS */
+.reveal-element.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Added a staggered effect layout for multiple elements inside a grid (e.g., cards, lists) */
+.reveal-element.active:nth-child(2) { transition-delay: 0.15s; }
+.reveal-element.active:nth-child(3) { transition-delay: 0.3s; }
+.reveal-element.active:nth-child(4) { transition-delay: 0.45s; }
+.reveal-element.active:nth-child(5) { transition-delay: 0.6s; }
