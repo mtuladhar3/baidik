@@ -13,7 +13,8 @@
 
     <link rel="preconnect " href="https://fonts.googleapis.com ">
     <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap "
+        rel="stylesheet ">
 
     <link rel="stylesheet " href="css/style.css ">
 </head>
@@ -79,38 +80,68 @@
     </header>
 
     <main>
-        <div class="avorica-hero-slider">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
+        <section class="alezon-exact-viewport" style="
+  position: relative;
+  width: 100%;
+  height: 440px;
+  background-color: #000000;
+  overflow: hidden;
+">
 
-                    <div class="swiper-slide avorica-slide-item" style="background-image: linear-gradient(#0000 22%, #00000080), linear-gradient(#000000, #f5f5f50a 23%, #fff0), linear-gradient(90deg, #000000, #fff0 62%), url('images/banner1.png');">
-                        <div class="container h-100 d-flex align-items-center">
-                            <div class="row w-100">
-                                <div class="col-xl-7 col-lg-9 col-md-11 text-start hero-animate">
-                                    <h1 class="avorica-title">Accelerate growth with expert guidance</h1>
-                                    <p class="avorica-description">We create modern, user-focused digital experiences that help businesses stand out, engage customers, and scale faster.</p>
-                                    <a href="#" class="avorica-btn avorica-btn-solid">Lets talk <span class="dot"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <img src="images/banner2.png" alt="Alezon Team" style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  ">
 
-                    <div class="swiper-slide avorica-slide-item" style="background-image: linear-gradient(#0000 22%, #00000080), linear-gradient(#000000, #f5f5f50a 23%, #fff0), linear-gradient(90deg, #000000, #fff0 62%), url('images/banner2.png');">
-                        <div class="container h-100 d-flex align-items-center">
-                            <div class="row w-100">
-                                <div class="col-xl-7 col-lg-9 col-md-11 text-start hero-animate">
-                                    <h1 class="avorica-title">Innovate and scale your digital assets</h1>
-                                    <p class="avorica-description">Empowering organizations with cutting-edge UI/UX architecture and strategy frameworks engineered for high-performance conversions.</p>
-                                    <a href="#" class="avorica-btn avorica-btn-solid">Lets talk <span class="dot"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="alezon-gradient-overlay" style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    background-image: 
+      linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.38) 4%, rgba(0,0,0,0.22) 10%, rgba(0,0,0,0.08) 16%, rgba(0,0,0,0) 22%), 
+      linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.76) 5%, rgba(0,0,0,0.48) 11%, rgba(0,0,0,0.24) 17%, rgba(4,4,4,0.04) 23%, rgba(0,0,0,0) 30%), 
+      linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.82) 12%, rgba(0,0,0,0.55) 25%, rgba(0,0,0,0.28) 40%, rgba(0,0,0,0.08) 52%, rgba(0,0,0,0) 62%);
+  "></div>
 
+            <div class="alezon-blur-overlay" style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+  "></div>
+
+
+
+            <div class="alezon-content-layer" style="
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 3.8rem 3rem;
+  ">
+                <div class="container">
+                    <h2
+                        style="color: #fff; font-size: 3.25rem; font-weight: 700; letter-spacing: -1.8px; margin: 0; line-height: 1;">
+                        About Baidik</h2>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
-        </div>
+        </section>
 
         <section class="interiors-about-section">
             <div class="container">
@@ -239,139 +270,6 @@ Unlisted Securities (Fair Value Through Profit or Loss, FVTPL): Strategic invest
                 </div>
             </div>
         </section>
-
-        <section class="avorica-pure-css-solutions avorica-insights-section">
-            <div class="container">
-                <div class="row align-items-end justify-content-between align-items-center insights-header-gap reveal-element reveal-up">
-                    <div class="col-lg-8">
-                        <div class="fin-badge-pill"><span class="fin-badge-asterisk">✦</span> Companies Invested In</div>
-                        <h2 class="insights-main-headline">Companies invested by Baidik Investment Company</h2>
-                    </div>
-                    <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
-                        <a href="#" class="avorica-btn avorica-btn-outline ">View more <span class="dot"></span></a>
-                    </div>
-                </div>
-
-                <div class="row align-items-center content-split-gap css-hover-scope">
-                    <div class="col-lg-5 reveal-element reveal-left">
-                        <div class="dynamic-media-container">
-                            <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=800&auto=format&fit=crop" alt="Digital growth experts" class="img-fluid media-swap-asset img-01">
-                            <img src="https://images.unsplash.com/photo-1531535934027-667f687cede5?q=80&w=800&auto=format&fit=crop" alt="High-impact creative campaigns" class="img-fluid media-swap-asset img-02">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Lead generation campaigns" class="img-fluid media-swap-asset img-03">
-                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" alt="Performance marketing services" class="img-fluid media-swap-asset img-04">
-                        
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 reveal-element reveal-right">
-                        <div class="solutions-revised-menu">
-                            <div class="menu-revised-row item-row-01 animate-item">
-                                <div class="menu-flex-container">
-                                    <span class="menu-index">01</span>
-                                    <div class="menu-heading-wrapper"><span class="menu-heading-text">Shiva Shree Hydropower Pvt. Ltd</span><span class="menu-indicator-line"></span></div>
-                                    <span class="menu-chevron">→</span>
-                                </div>
-                            </div>
-                            <div class="menu-revised-row item-row-02 animate-item">
-                                <div class="menu-flex-container">
-                                    <span class="menu-index">02</span>
-                                    <div class="menu-heading-wrapper"><span class="menu-heading-text">Khani Khola Hydropower Co. Ltd</span><span class="menu-indicator-line"></span></div>
-                                    <span class="menu-chevron">→</span>
-                                </div>
-                            </div>
-                            <div class="menu-revised-row item-row-03 animate-item">
-                                <div class="menu-flex-container">
-                                    <span class="menu-index">03</span>
-                                    <div class="menu-heading-wrapper"><span class="menu-heading-text">Singati Hydro Energy Limited</span><span class="menu-indicator-line"></span></div>
-                                    <span class="menu-chevron">→</span>
-                                </div>
-                            </div>
-                            <div class="menu-revised-row item-row-04 animate-item">
-                                <div class="menu-flex-container">
-                                    <span class="menu-index">04</span>
-                                    <div class="menu-heading-wrapper"><span class="menu-heading-text">Habitat Power Company Limited</span><span class="menu-indicator-line"></span></div>
-                                    <span class="menu-chevron">→</span>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="avorica-partners-section ">
-            <div class="container">
-                <div class="row reveal-element reveal-up">
-                    <div class="col-12">
-                       <div class="fin-badge-pill"><span class="fin-badge-asterisk">✦</span> Trusted partners built together</div>
-                        <h2 class="partners-main-headline">Driving success through strong partnerships</h2>
-                    </div>
-                </div>
-                <div class="row"><div class="col-12"><div class="partners-horizontal-divider"></div></div></div>
-                <div class="row gy-4 partners-grid-layout reveal-element reveal-up">
-                    <div class="col-md-6 col-lg-2 d-flex"><div class="partner-logo-card"><div class="logo-wrapper"><span class="mock-logo-text type-serif">Tribepa</span></div></div></div>
-                    <div class="col-md-6 col-lg-2 d-flex"><div class="partner-logo-card"><div class="logo-wrapper"><span class="mock-logo-text type-sans-bold">DIAGEO</span></div></div></div>
-                    <div class="col-md-6 col-lg-2 d-flex"><div class="partner-logo-card"><div class="logo-wrapper"><span class="mock-logo-text type-display-elegant">Jamie<br>Oliver</span></div></div></div>
-                    <div class="col-md-6 col-lg-2 d-flex"><div class="partner-logo-card"><div class="logo-wrapper"><span class="mock-logo-text type-spaced-subtle">COMPTOIR<br><small>LIBANAIS</small></span></div></div></div>
-                    <div class="col-md-6 col-lg-2 d-flex"><div class="partner-logo-card"><div class="logo-wrapper"><span class="mock-logo-text type-geometric-lines">BOUNCE</span></div></div></div>
-                    <div class="col-md-6 col-lg-2 d-flex"><div class="partner-logo-card"><div class="logo-wrapper"><span class="mock-logo-text type-tech-modern">✦ SpectraFlow</span></div></div></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="avorica-insights-section">
-            <div class="container">
-                <div class="row align-items-end justify-content-between insights-header-gap reveal-element reveal-up">
-                    <div class="col-lg-8">
-                        <div class="fin-badge-pill"><span class="fin-badge-asterisk">✦</span> Our Blog</div>
-                        <h2 class="insights-main-headline">Building smarter solutions for modern businesses</h2>
-                    </div>
-                    <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
-                        <a href="#" class="avorica-btn avorica-btn-outline">View more <span class="dot"></span></a>
-                    </div>
-                </div>
-
-                <div class="row gy-4 gy-xl-5">
-                    <div class="col-md-6 col-lg-4 reveal-element reveal-up">
-                        <article class="insights-article-card">
-                            <div class="insights-thumbnail-frame"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="Strategy meeting" class="img-fluid insights-card-img"></div>
-                            <div class="insights-meta-wrapper">
-                                <span class="insights-calendar-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16"><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/><path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
-                                </span>
-                                <time datetime="2026-03-20" class="insights-date-stamp">20 March 2026</time>
-                            </div>
-                            <h3 class="insights-article-title"><a href="#" class="insights-title-link">Empowering leaders with practical strategy and market intelligence</a></h3>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-4 reveal-element reveal-up">
-                        <article class="insights-article-card">
-                            <div class="insights-thumbnail-frame"><img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=800&auto=format&fit=crop" alt="Workspace setup" class="img-fluid insights-card-img"></div>
-                            <div class="insights-meta-wrapper">
-                                <span class="insights-calendar-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16"><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/><path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
-                                </span>
-                                <time datetime="2026-03-20" class="insights-date-stamp">20 March 2026</time>
-                            </div>
-                            <h3 class="insights-article-title"><a href="#" class="insights-title-link">Transforming organizations through sustainable innovation initiatives</a></h3>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-4 reveal-element reveal-up">
-                        <article class="insights-article-card">
-                            <div class="insights-thumbnail-frame"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" alt="Team mentorship" class="img-fluid insights-card-img"></div>
-                            <div class="insights-meta-wrapper">
-                                <span class="insights-calendar-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16"><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/><path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
-                                </span>
-                                <time datetime="2026-03-20" class="insights-date-stamp">20 March 2026</time>
-                            </div>
-                            <h3 class="insights-article-title"><a href="#" class="insights-title-link">Strengthening organizations with data-driven strategy and leadership</a></h3>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="opt-brand-footer-wrapper ">
@@ -386,7 +284,8 @@ Unlisted Securities (Fair Value Through Profit or Loss, FVTPL): Strategic invest
                 <div class="col-lg-4 col-md-6 col-sm-12 ">
                     <div class="opt-footer-brand-info-block ">
                         <p class="opt-brand-philosophy-text ">
-                            We're committed to delivering exceptional care with compassion, trust, and integrity. From your first visit to long-term support, your health and comfort are always our priority.
+                            We're committed to delivering exceptional care with compassion, trust, and integrity. From
+                            your first visit to long-term support, your health and comfort are always our priority.
                         </p>
 
                     </div>
@@ -438,15 +337,15 @@ Unlisted Securities (Fair Value Through Profit or Loss, FVTPL): Strategic invest
                             <li class="opt-contact-item ">
                                 <i class="fa-solid fa-phone opt-icon-abs "></i>
                                 <a href="tel:+977-9807654321" class="opt-contact-link ">
-                    +977-9807654321
-                </a>
+                                    +977-9807654321
+                                </a>
                             </li>
 
                             <li class="opt-contact-item ">
                                 <i class="fa-solid fa-envelope opt-icon-abs "></i>
                                 <a href="mailto:info@baidik.com " class="opt-contact-link ">
-                    info@baidik.com
-                </a>
+                                    info@baidik.com
+                                </a>
                             </li>
                         </ul>
 
@@ -458,7 +357,8 @@ Unlisted Securities (Fair Value Through Profit or Loss, FVTPL): Strategic invest
             <div class="opt-footer-bottom-utility-bar ">
                 <div class="row align-items-center ">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 ">
-                        <p class="opt-copyright-disclaimer-text ">Copyright © 2026, Baidik Investment Company. All rights reserved.</p>
+                        <p class="opt-copyright-disclaimer-text ">Copyright © 2026, Baidik Investment Company. All
+                            rights reserved.</p>
                     </div>
                 </div>
             </div>

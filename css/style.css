@@ -1993,12 +1993,26 @@
 /* ==========================================================================
    AVORICA VIDEO SHOWCASE & FLOATING METRICS SYSTEM
    ========================================================================== */
-
+.fin-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(17, 65, 40, 0.205);
+    border: 1px solid rgba(17, 65, 40, 0.329);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #114128;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
 .fin-parallax-showcase {
     position: relative;
     width: 100%;
     /* Double padding layout footprint provides extreme bottom leeway for cards overlay space overflow */
-    padding: 120px 0 160px 0;
+    padding: 70px  0;
     /* Strict Functional Specification: Static fixed perspective picture frame viewport behavior */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1600&auto=format&fit=crop');
     background-attachment: fixed;
@@ -2022,6 +2036,21 @@
 /* --- Miniature Top Tag Badge Pill --- */
 
 .fin-parallax-showcase .fin-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+.avorica-partners-section .fin-badge-pill {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -2184,10 +2213,10 @@
 }
 
 .fin-parallax-showcase .fin-card-label {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #111111;
-    margin-bottom: 28px;
+    margin-bottom: 10px;
 }
 
 
@@ -2215,11 +2244,10 @@
 }
 
 .fin-parallax-showcase .fin-sub-metric-text {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.4;
     color: #666666;
     margin: 0;
-    padding-bottom: 2px;
 }
 
 
@@ -2671,3 +2699,183 @@
 .reveal-element.active:nth-child(3) { transition-delay: 0.3s; }
 .reveal-element.active:nth-child(4) { transition-delay: 0.45s; }
 .reveal-element.active:nth-child(5) { transition-delay: 0.6s; }
+
+/* Component Canvas Proportions */
+.bic-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 360px; /* Calibrated height for internal page hero blocks */
+  background-color: #0b0f14;
+  overflow: hidden;
+}
+
+/* Base Image Configuration */
+.bic-banner-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  z-index: 1;
+}
+
+/* LAYER 2: ULTRA-SMOOTH COLOR SHADING MASK
+  Uses intermediate easing steps to make the transition from pure black 
+  to transparency look completely fluid and photographic.
+*/
+.bic-banner-shading-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  
+  background: 
+    /* Top Vignette Shadow Easing Curve */
+    linear-gradient(180deg, 
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.72) 8%,
+      rgba(0, 0, 0, 0.38) 16%,
+      rgba(0, 0, 0, 0.12) 24%,
+      rgba(0, 0, 0, 0.00) 32%
+    ),
+    /* Bottom Vignette Shadow Easing Curve */
+    linear-gradient(0deg, 
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.78) 10%,
+      rgba(0, 0, 0, 0.45) 22%,
+      rgba(0, 0, 0, 0.15) 36%,
+      rgba(0, 0, 0, 0.00) 52%
+    );
+}
+
+/* LAYER 3: SMOOTH EDGE-BLUR SYSTEM
+  Calculates webkit masks dynamically to make sure the glass blur blends perfectly 
+  into the sharp, transparent architectural center.
+*/
+.bic-banner-blur-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
+  /* Masking interpolation to mathematically transition opacity paths smoothly */
+  -webkit-mask-image: linear-gradient(to bottom, 
+    rgba(0,0,0,1) 0%, 
+    rgba(0,0,0,0.88) 6%,
+    rgba(0,0,0,0.35) 15%,
+    rgba(0,0,0,0) 25%, 
+    rgba(0,0,0,0) 68%, 
+    rgba(0,0,0,0.28) 80%,
+    rgba(0,0,0,0.85) 92%,
+    rgba(0,0,0,1) 100%
+  );
+  mask-image: linear-gradient(to bottom, 
+    rgba(0,0,0,1) 0%, 
+    rgba(0,0,0,0.88) 6%,
+    rgba(0,0,0,0.35) 15%,
+    rgba(0,0,0,0) 25%, 
+    rgba(0,0,0,0) 68%, 
+    rgba(0,0,0,0.28) 80%,
+    rgba(0,0,0,0.85) 92%,
+    rgba(0,0,0,1) 100%
+  );
+}
+
+/* LAYER 4: Foreground content coordinates */
+.bic-banner-content-layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+/* Content Container positioning elements directly inside the bottom blurred region */
+.bic-breadcrumb-wrapper {
+  padding-bottom: 2.5rem;
+}
+
+/* Clean, modern breadcrumb links styling */
+.bic-breadcrumb-wrapper .breadcrumb-item, 
+.bic-breadcrumb-wrapper .breadcrumb-item a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bic-breadcrumb-wrapper .breadcrumb-item a:hover {
+  color: #ffffff !important;
+}
+
+/* Active current-page styling */
+.bic-breadcrumb-wrapper .breadcrumb-item.active {
+  color: #bfa054 !important; /* Corporate Gold Accents matching button treatments */
+  font-weight: 600;
+}
+
+/* Custom separator glyph */
+.bic-breadcrumb-wrapper .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.35);
+  content: "/";
+  padding-right: 0.5rem;
+}
+
+/* Responsive configurations for small viewports */
+@media (max-width: 767.98px) {
+  .bic-hero-banner {
+    height: 260px; /* Adjusts banner layout safely for smartphones */
+  }
+  
+  .bic-breadcrumb-wrapper {
+    padding-bottom: 1.5rem;
+  }
+  
+  .bic-breadcrumb-wrapper .breadcrumb-item, 
+  .bic-breadcrumb-wrapper .breadcrumb-item a {
+    font-size: 0.8rem;
+  }
+}
+.your-custom-banner-class {
+  background-image: 
+    /* 1. Bottom Shadow: Smoothly fades from clear to black tint */
+    linear-gradient(0deg, 
+      rgba(0, 0, 0, 0.50) 0%,
+      rgba(0, 0, 0, 0.38) 4%,
+      rgba(0, 0, 0, 0.22) 10%,
+      rgba(0, 0, 0, 0.08) 16%,
+      rgba(0, 0, 0, 0.00) 22%
+    ),
+    
+    /* 2. Top Shadow: Perfectly eased from rich black down to a subtle edge mist */
+    linear-gradient(180deg, 
+      rgba(0, 0, 0, 1.00) 0%,
+      rgba(0, 0, 0, 0.76) 5%,
+      rgba(0, 0, 0, 0.48) 11%,
+      rgba(0, 0, 0, 0.24) 17%,
+      rgba(4, 4, 4, 0.04) 23%,
+      rgba(0, 0, 0, 0.00) 30%
+    ),
+    
+    /* 3. Left Shadow: Smooth 90-degree gradient text background */
+    linear-gradient(90deg, 
+      rgba(0, 0, 0, 1.00) 0%,
+      rgba(0, 0, 0, 0.82) 12%,
+      rgba(0, 0, 0, 0.55) 25%,
+      rgba(0, 0, 0, 0.28) 40%,
+      rgba(0, 0, 0, 0.08) 52%,
+      rgba(0, 0, 0, 0.00) 62%
+    );
+}
