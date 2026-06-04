@@ -11,7 +11,9 @@
 .h-100 {
     height: 150% !important;
 }
-
+li.nav-item {
+    padding: 10px 0;
+}
 .avorica-header-absolute {
     position: absolute;
     top: 0;
@@ -29,6 +31,9 @@
     color: #ffffff !important;
 }
 
+.navbar-collapse{
+    justify-content: end;
+}
 .avorica-logo img {
     max-width: 140px;
 }
@@ -238,7 +243,7 @@
 
 @media (max-width: 991px) {
     .avorica-header-absolute {
-        background-color: #0b172c;
+        background-color: #114128;
         position: relative;
         /* Restores flow hierarchy on mobile drawers */
         padding: 10px;
@@ -2878,4 +2883,1144 @@
       rgba(0, 0, 0, 0.08) 52%,
       rgba(0, 0, 0, 0.00) 62%
     );
+}
+/* Contact Page */
+
+/* Custom Global Font & Structural Core Settings */
+.git-section-wrapper {
+  padding: 5rem 0;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1a1a1a;
+}
+
+/* Typography elements */
+.git-main-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+.git-lead-text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+}
+
+/* BASE INFO CARD STATE (Default light mode background) */
+.git-info-card {
+  padding: 1.25rem;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 90px;
+  background-color: #f7f7f7; /* Default non-hover color */
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* THE HOVER PERSISTENCE STATE (Triggered via JS class assignment) */
+.git-info-card.git-active {
+  background-color: #114128; /* Calibrated exact deep olive tone from image_699d8b.jpg */
+  color: #ffffff;
+}
+
+.git-card-label {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.git-card-detail {
+  font-size: 14px;
+  opacity: 0.9;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+/* Form Design - Underlined Minimal Layout Styles */
+.git-form-group {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.git-form-control,
+.git-form-select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 0;
+  padding: 1.5rem 0 0.4rem 0;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  outline: none;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.git-form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M1 3.5 L5 7.5 L9 3.5' fill='none' stroke='%23000000' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 4px) 70%;
+}
+
+.git-form-control:focus,
+.git-form-select:focus {
+  border-bottom-color: #1e2d4a;
+}
+
+.git-textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* Floating Label Animation Engine */
+.git-form-label {
+  position: absolute;
+  top: 1.4rem;
+  left: 0;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.git-form-control:focus ~ .git-form-label,
+.git-form-control:not(:placeholder-shown) ~ .git-form-label,
+.git-form-select:focus ~ .git-form-label,
+.git-form-select:valid ~ .git-form-label {
+  top: 0;
+  font-size: 0.75rem;
+  color: #777777;
+}
+
+/* Submit Button Style */
+.git-submit-btn {
+  background-color: #1e2d4a; 
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 2rem;
+  border-radius: 50px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(30, 45, 74, 0.15);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.git-submit-btn:hover {
+  background-color: #162137;
+  transform: translateY(-1px);
+}
+
+.git-btn-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Right Side Image Element container adjustments */
+.git-image-wrapper {
+  width: 100%;
+}
+
+.git-side-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* --- Responsive Layout Adjustments --- */
+@media (max-width: 991.98px) {
+  .git-section-wrapper {
+    padding: 3.5rem 0;
+  }
+  
+  .git-side-img {
+    height: 400px;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .git-info-card {
+    min-height: auto;
+  }
+  
+  .git-main-title {
+    font-size: 1.85rem;
+  }
+}
+/* Container adjustments to allow absolute children layout tracking */
+.git-map-parent {
+  position: relative;
+  width: 100%;
+  min-height: 100%; /* Commands column-stretch alignment tracking */
+}
+
+/* 
+  Absolute positioning maps the iframe grid directly onto the corners of the column,
+  forcing it to perfectly match the height of the left form.
+*/
+.git-side-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px; /* Matches the clean rounded map look in image_68c0cc.png */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Responsive Layout Breakpoints --- */
+@media (max-width: 991.98px) {
+  /* On tablets and mobile, drops the absolute restriction so the map doesn't compress to 0 height */
+  .git-map-parent {
+    min-height: 350px; 
+    margin-top: 2.5rem;
+  }
+  
+  .git-side-map {
+    position: relative;
+    height: 350px;
+  }
+}
+
+/* Blog Section */
+
+/* Core Section Layout Framework */
+.ndc-insights-section {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+/* Card Outer Container Base */
+.ndc-insight-card {
+  background-color: #f8f9fa; /* Off-white canvas tone seen in image_68b1a4.jpg */
+  border-radius: 14px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.02); /* Extremely subtle edge definition */
+}
+
+/* Top Meta Row Alignments */
+.ndc-card-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.ndc-card-date-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6c757d;
+}
+
+.ndc-calendar-icon {
+  width: 14px;
+  height: 14px;
+  stroke: #495057;
+  opacity: 0.85;
+}
+
+.ndc-date-text {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+/* Rounded Link Trigger Arrow Button */
+.ndc-action-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  text-decoration: none;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.ndc-action-circle:hover {
+  background-color: #111111;
+  border-color: #111111;
+  color: #ffffff;
+}
+
+.ndc-arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Typography Headings */
+.ndc-card-headline {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  letter-spacing: -0.4px;
+}
+
+.ndc-card-headline a {
+  color: #111111;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ndc-card-headline a:hover {
+  color: #495057;
+}
+
+/* Image Framing Configuration */
+.ndc-card-media-frame {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: auto; /* Pushes the frame to pin perfectly along the bottom border */
+}
+
+.ndc-frame-asset {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 
+  Since we are referencing image_68b1a4.jpg which contains BOTH cards in one image,
+  object-position coordinates split the left and right components cleanly!
+*/
+.ndc-frame-asset.asset-left {
+  object-position: 12% center;
+  transform: scale(2.05); /* Scales up the specific half component viewport */
+}
+
+.ndc-frame-asset.asset-right {
+  object-position: 88% center;
+  transform: scale(2.05);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1199.98px) {
+  .ndc-card-headline {
+    font-size: 1.2rem;
+  }
+  .ndc-card-media-frame {
+    height: 210px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .ndc-insight-card {
+    padding: 1.75rem;
+  }
+  .ndc-card-headline {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .ndc-card-media-frame {
+    height: 240px;
+  }
+}
+
+/* Custom Global Font & Structural Core Canvas Settings */
+.bda-article-container {
+  padding: 70px 0;
+  background-color: #ffffff;
+  color: #555555;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 1. Main Hero Image Container */
+.bda-featured-hero-box {
+  width: 100%;
+  border-radius: 16px; /* Recreates smooth rounded corners precisely */
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.bda-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2. Core Text Body Elements */
+.bda-content-body-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666666;
+  margin-bottom: 1.5rem;
+  text-align: justify; /* Aligns with clean formal reference edges */
+}
+
+/* 3. Highlight Card Blockquote System */
+.bda-highlight-quote-card {
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+.bda-quote-icon-column {
+  flex-shrink: 0;
+}
+
+.bda-quote-glyph {
+  width: 28px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.bda-quote-content-column {
+  flex-grow: 1;
+}
+
+.bda-quote-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #0c1a30; /* Dark primary brand indigo selection */
+  margin: 0;
+}
+
+/* 4. Headings & List Architectures */
+.bda-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0c1a30;
+  letter-spacing: -0.6px;
+  margin-bottom: 0.75rem;
+}
+
+.bda-section-lead {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.bda-bullet-points-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.bda-bullet-points-list li {
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #555555;
+  padding-left: 1.5rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Recreates custom clean dots */
+.bda-bullet-points-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0.2rem;
+  top: -0.05rem;
+  color: #333333;
+  font-size: 1.1rem;
+}
+
+/* Thin layout structural break rule */
+.bda-divider-line {
+  border: 0;
+  border-top: 1px solid #e9ecef;
+  opacity: 1;
+}
+
+/* 5. Footer Interactive Elements Row */
+.bda-footer-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Badges elements alignment styles */
+.bda-tags-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.bda-tags-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0c1a30;
+  margin-right: 4px;
+}
+
+.bda-pill-badge {
+  background-color: #114128 !important; /* Calibrated brand solid blue badge */
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem !important;
+  border-radius: 50px !important;
+  border: none !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.bda-pill-badge:hover {
+  opacity: 0.9;
+}
+
+/* Brand Social circles link row buttons */
+.bda-socials-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bda-social-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #114128; /* Matching solid uniform brand circles */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.bda-social-circle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.bda-social-circle:hover {
+  background-color: #0f33cc;
+  transform: translateY(-1px);
+}
+
+/* --- Responsive Adaptations Layout Breakpoints --- */
+@media (max-width: 767.98px) {
+  .bda-article-container {
+    padding: 2.5rem 0;
+  }
+  
+  .bda-content-body-text p {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  .bda-highlight-quote-card {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .bda-quote-text {
+    font-size: 1rem;
+  }
+
+  .bda-section-title {
+    font-size: 1.65rem;
+  }
+
+  .bda-footer-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* The semantic blockquote element container */
+.bda-content-body-text blockquote {
+  position: relative;
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  padding: 2.25rem 2.5rem 2.25rem 4.5rem; /* Expanded left padding to give the pseudo-element room */
+  margin: 0 0 3rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+   font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #0c1a30;
+  margin: 0;
+}
+
+/* Pseudo-element injector containing your exact blue quote glyph */
+.bda-content-body-text blockquote::before {
+  content: "";
+  position: absolute;
+  top: 2.45rem; /* Positions perfectly alongside the baseline of the first text row */
+  left: 2rem;
+  width: 28px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* Safe URI-encoded version of your exact SVG path geometry and #1B44F6 brand color fill */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 38' fill='none'%3E%3Cpath d='M0 21.6667C0 9.61111 9.42222 0 20.8 0V7.38889C13.4222 7.38889 11.2889 12.8778 11.2889 16.9H20.8V38H0V21.6667ZM27.2 21.6667C27.2 9.61111 36.6222 0 48 0V7.38889C40.6222 7.38889 38.4889 12.8778 38.4889 16.9H48V38H27.2V21.6667Z' fill='%23114128'/%3E%3C/svg%3E");
+}
+
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767.98px) {
+  .bda-content-body-text blockquote {
+    padding: 1.5rem 1.5rem 1.5rem 3.25rem; 
+       font-size: 1rem;/* Contracts container margins for small viewports */
+  }
+  
+  .bda-content-body-text blockquote::before {
+    top: 1.65rem;
+    left: 1.25rem;
+    width: 20px; /* Scales down slightly so it stays proportional to mobile fonts */
+    height: 16px;
+  }
+
+  
+}
+
+/* --- Section 1: Intro (Why Partner With Us) --- */
+        .intro-section {
+            background: radial-gradient(circle at 90% 10%, #f3f4f6 0%, #ffffff 60%);
+            position: relative;
+            padding: 100px 0;
+        }
+        
+        .accent-pill {
+            background-color: rgba(22, 43, 101, 0.05);
+            color: #162B65;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .heading-creative {
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.15;
+            color: #0f172a;
+        }
+
+        .heading-creative strong {
+            font-weight: 700;
+            background: linear-gradient(135deg, #114128 0%, #3f9b6d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-creative-lead {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #475569;
+            padding-left: 1.5rem;
+        }
+
+        /* --- Section 2: Banner (Join Us) --- */
+        .cta-banner-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+
+        .creative-card-banner {
+            background: linear-gradient(135deg, #3f9b6d 0%, #114128 100%);
+            border-radius: 32px;
+            padding: 4.5rem 4rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(22, 43, 101, 0.15);
+        }
+
+        .creative-card-banner::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(43, 89, 255, 0.15) 0%, transparent 70%);
+        }
+
+        .btn-creative-action {
+            background-color: #ffffff;
+            color: #162B65;
+            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 14px;
+            border: 1px solid transparent;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .btn-creative-action:hover {
+            background-color: #2B59FF;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(43, 89, 255, 0.3);
+        }
+
+        /* --- NEW: Fixed Pure Background Full Parallax Section (No Content) --- */
+        .parallax-divider-pure {
+            background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+            height: 450px; /* Adjust height here to change parallax exposure scale */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+
+        /* --- Section 3: The Form Portal --- */
+        .form-section {
+            background-color: #F0FBF5;
+            padding: 70px 0;
+        }
+
+        .form-card-modern {
+            padding: 0 3rem;
+        }
+
+        /* Input Interaction Overhaul */
+        .interactive-group {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .interactive-input {
+            width: 100%;
+            padding: 18px 16px 6px 16px;
+            font-size: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background-color: #f8fafc;
+            color: #0f172a;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .interactive-group label {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+            font-size: 1rem;
+        }
+
+        .interactive-input:focus,
+        .interactive-input:not(:placeholder-shown) {
+            padding-top: 24px;
+            padding-bottom: 4px;
+            background-color: #ffffff;
+            border-color: #b48c37;
+            box-shadow: 0 0 0 4px rgba(43, 89, 255, 0.08);
+        }
+
+        .interactive-input:focus ~ label,
+        .interactive-input:not(:placeholder-shown) ~ label {
+            top: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #b48c37;
+        }
+
+        .interactive-select {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .select-arrow {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            pointer-events: none;
+        }
+
+        .btn-submit-creative {
+            background: linear-gradient(135deg, #162B65 0%, #0a1432 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 16px 40px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(22, 43, 101, 0.1);
+        }
+
+        .btn-submit-creative:hover {
+            background: linear-gradient(135deg, #2B59FF 0%, #162B65 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(43, 89, 255, 0.25);
+        }
+
+        /* Responsive Breakpoint Adaptations */
+        @media (max-width: 991.98px) {
+            .heading-creative { font-size: 2.75rem; }
+            .creative-card-banner { padding: 3rem 2rem; }
+            .form-card-modern { padding: 2.5rem 1.5rem; }
+            /* Graceful fallback: turn off fixed attachment on touch screens for optimized rendering */
+            .parallax-divider-pure { background-attachment: scroll; height: 300px; }
+        }
+
+        .nc-media-wrapper {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            /* Generous vertical padding to create the premium, airy layout structure */
+            padding: 100px 0; 
+        }
+
+        /* Sticky Title Column Logic */
+        .nc-media-sticky-col {
+            position: -webkit-sticky;
+            position: sticky;
+            /* Adjust top offset depending on if you have a floating/sticky main navbar */
+            top: 40px; 
+            align-self: start;
+        }
+
+        /* Title Typography Matching image_4e451f.png */
+        .nc-media-title {
+            color: #114128; /* Deep premium blue corporate tone */
+            font-size: 2rem; /* Prominent scale weight */
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        /* Content Right Column Typography Matching image_4e451f.png */
+        .nc-media-body-text {
+            color: #3d2d33; /* Dark matte auburn/charcoal blend tone */
+            font-size: 16px;
+            font-weight: 400; /* Breathable line height layout */
+            letter-spacing: 0.01em;
+        }
+
+        /* Smooth responsive fallback adjustments */
+        @media (max-width: 991.98px) {
+            .nc-media-wrapper {
+                padding: 60px 0;
+            }
+            .nc-media-sticky-col {
+                position: static; /* Disable sticky pinning on smaller mobile viewports for optimal stack flow */
+                margin-bottom: 24px;
+            }
+            .nc-media-title {
+                font-size: 2.5rem;
+            }
+            .nc-media-body-text {
+                font-size: 1.05rem;
+                line-height: 1.75;
+            }
+        }
+.mosaic-section{
+    padding: 0 0 70px;
+}
+.mosaic-section a{
+    text-decoration: none;
+}
+
+        .mosaic-item {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        border-radius: 24px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 35px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mosaic-item.long { height: 320px; }
+    .mosaic-item.square { height: 350px; }
+    .mosaic-item.short { height: 240px; }
+    
+    .mosaic-item:hover {
+        transform: scale(1.015) translateY(-4px);
+    }
+    .mosaic-content {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+    }
+    .mosaic-section a:hover{
+        text-decoration: underline;
+        color:#fff;
+    }
+    .mosaic-content h3 {
+        font-weight: 700;
+        margin: 0;
+        font-size: 1.4rem;
+        letter-spacing: -0.01em;
+    }
+    .mosaic-content .badge {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 6px 12px;
+        border-radius: 30px;
+        font-weight: 600;
+    }
+
+    /* --- SECTION 1: INTRODUCTION HERO REGION WITH GEOMETRIC BACKGROUND ACCENTS --- */
+        .bp-intro-block {
+            position: relative;
+            background-color: #f8fafc;
+            padding: 80px 20px;
+            overflow: hidden;
+        }
+        
+
+        .bp-header-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        .bp-header-title {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 24px;
+        }
+        .bp-header-lead {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+       
+
+        /* Image Display Windows */
+        .bp-image-frame {
+            width: 100%;
+            height: 520px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Dynamic Copywriting Containers */
+        .bp-text-container {
+            height: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10% 12%; /* Generous inner wall spacing to guarantee beautiful density */
+            background-color: #ffffff;
+        }
+        .bp-block-title {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+        .bp-block-desc {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* --- RESPONSIVE ADAPTABILITY INTERCEPTORS --- */
+        @media (max-width: 991.98px) {
+            .bp-header-title { font-size: 1.85rem; }
+            
+            /* Allow blocks to scale naturally based on screen content height on mobile/tablet viewports */
+            .bp-image-frame {
+                height: 360px;
+            }
+            .bp-text-container {
+                height: auto;
+                padding: 60px 40px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .bp-text-container { padding: 45px 24px; }
+            .bp-image-frame { height: 280px; }
+        }
+        
+
+        /* --- Core Banner Container --- */
+.alezon-exact-viewport {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/* --- Asset Positioning --- */
+.alezon-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* --- Gradient Overlay System --- */
+.alezon-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    background-image: 
+        linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.38) 4%, rgba(0,0,0,0.22) 10%, rgba(0,0,0,0.08) 16%, rgba(0,0,0,0) 22%), 
+        linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.76) 5%, rgba(0,0,0,0.48) 11%, rgba(0,0,0,0.24) 17%, rgba(4,4,4,0.04) 23%, rgba(0,0,0,0) 30%), 
+        linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.82) 12%, rgba(0,0,0,0.55) 25%, rgba(0,0,0,0.28) 40%, rgba(0,0,0,0.08) 52%, rgba(0,0,0,0) 62%);
+}
+
+/* --- Mask Blurred Layer --- */
+.alezon-blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+}
+
+/* --- Dynamic Flex Content Framework --- */
+.alezon-content-layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 3.8rem 3rem; /* Styled padding matching original layout specs */
+}
+
+/* --- Core Typographic Styles --- */
+.alezon-main-title {
+    color: #ffffff;
+    font-size: 3.25rem;
+    font-weight: 700;
+    letter-spacing: -1.8px;
+    margin: 0;
+    line-height: 1;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Adaptive Viewport Interceptors)
+   ========================================================================== */
+
+/* --- Desktop/Tablets Constraint (Under 992px) --- */
+@media (max-width: 991.98px) {
+    .alezon-exact-viewport {
+        height: 380px; /* Bring down banner footprint depth slightly */
+    }
+    .alezon-content-layer {
+        padding: 0 0 3rem 1.5rem; /* Readjust edge gap gutters slightly */
+    }
+    .alezon-main-title {
+        font-size: 2.75rem; /* Smooth text compression drop */
+        letter-spacing: -1.2px;
+    }
+}
+
+/* --- Meta Date Row Layout --- */
+.alezon-meta-date-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 10px 10px;
+    color: #ffffff;
+    opacity: 0.95;
+}
+
+/* --- Calendar Icon Styling --- */
+.alezon-date-icon {
+    font-size: 14px;
+}
+
+/* --- Text Element Styling --- */
+.alezon-date-text {
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Adaptive Viewport Interceptors)
+   ========================================================================== */
+
+/* --- Smartphones Viewport Core (Under 576px) --- */
+@media (max-width: 575.98px) {
+    .alezon-meta-date-row {
+        /* Centered layout if needed to match the centered heading text on mobile */
+        justify-content: center; 
+        margin: 0 0 10px 0; /* Cleared absolute left offset for clean mobile centering */
+    }
+    
+    .alezon-date-icon,
+    .alezon-date-text {
+        font-size: 13px; /* Slightly scaled down text for optimal readability on mobile screens */
+    }
+}
+
+/* --- Smartphones Viewport Core (Under 576px) --- */
+@media (max-width: 575.98px) {
+    .alezon-exact-viewport {
+        height: 280px; /* Compact height for smaller mobile environments */
+    }
+    .alezon-content-layer {
+        padding: 0 0 2rem 0; /* Remove extreme left absolute offsets so it centers with Bootstrap's native container */
+    }
+    .alezon-main-title {
+        font-size: 2.25rem; /* Tighten typographic visual weight */
+        letter-spacing: -0.8px;
+        text-align: center; /* Optically centers heading text on small screens */
+    }
 }

@@ -52,3 +52,17 @@
     const targetElements = document.querySelectorAll(".reveal-element");
     targetElements.forEach(element => scrollObserver.observe(element));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll('.js-git-hover-card');
+
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          // Remove active class from whichever card currently has it
+          cards.forEach(c => c.classList.remove('git-active'));
+          
+          // Add active state to the currently hovered card
+          card.classList.add('git-active');
+        });
+      });
+    });
