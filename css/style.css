@@ -81,12 +81,12 @@ li.nav-item {
 }
 
 .avorica-header-absolute .navbar-nav .nav-item:hover {
-  background: #114229;
+  /* background: #114229; */
    border-radius: 500px;
   /* padding: 10px 20px; */
 }
 .avorica-header-absolute .navbar-nav .nav-item:hover a{
-color: #ffffff !important;
+/* color: #ffffff !important; */
  
 }
 
@@ -274,10 +274,13 @@ color: #ffffff !important;
 
 @media (max-width: 991px) {
   .avorica-header-absolute {
-    background-color: #114128;
+    /* background-color: #114128; */
     position: relative;
     /* Restores flow hierarchy on mobile drawers */
     padding: 10px;
+  }
+  .navbar-toggler{
+        background-color: #104028;
   }
   .avorica-header-absolute .avorica-dropdown-menu {
     position: static;
@@ -4335,7 +4338,7 @@ color: #ffffff !important;
         padding: 0.5rem 1rem;
     }
     .avorica-header-absolute .navbar-nav .nav-item a{
-      color:#fff!important;
+      /* color:#fff!important; */
       padding: 10px 0;
     }
     .navbar-nav .dropdown-toggle::after{
