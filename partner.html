@@ -32,26 +32,51 @@
         </button>
 
         <div class="collapse navbar-collapse" id="avoricaNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">Who We Are</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="business.html">What We Do</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="partner.html">Partner With Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Media Coverage</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Who We Are
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="mission.html">Mission/Vision</a></li>
+                            <li><a class="dropdown-item" href="#.html">Organization Chart</a></li>
+                            <li><a class="dropdown-item" href="team.html">Management Team</a></li>
+                            <li><a class="dropdown-item" href="team.html">Boards Of Directors</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="business.html" id="whoWeAreDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            What We Do
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="business-category.html">Hydropower Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Real State Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Health Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Education Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Social Sector</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner.html">Partner With Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">Investor Relation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Media Coverage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
         </div>
     </nav>
 </header>
@@ -85,8 +110,7 @@
                     <p class="text-creative-lead mb-4">
                         What began as a simple textile and commodity trading enterprise has, over the last five decades, diversified its activities into manufacturing, infrastructure development, international real estate, and strategic investments. We bridge capabilities across industries to create long-term value for our global ecosystem.
                     </p>
-                    <div class="d-flex align-items-center gap-2 mt-4 text-secondary">
-                        <i class="bi bi-envelope-at fs-5 text-primary"></i>
+                    <div class="d-flex align-items-center gap-2 mt-4 text-secondary part-mail">
                         <span>Direct Inquiry: 
                             <a href="mailto:partner@domain.com" class="fw-bold text-dark text-decoration-none border-bottom border-2 border-dark pb-1 ms-1">partner@domain.com</a>
                         </span>
@@ -96,16 +120,16 @@
             <div class="creative-card-banner mt-5">
                 <div class="row align-items-center gy-4">
                     <div class="col-lg-8">
-                        <h2 class="text-white fw-light mb-2" style="font-size: 2.25rem;">
+                        <h2 class="text-white fw-semibold mb-4" style="font-size: 2.25rem;">
                             Join Us as a <strong>Strategic Partner</strong>
                         </h2>
-                        <p class="text-white-50 mb-0 fs-5 fw-light" style="max-width: 650px;">
+                        <p class="text-white mb-0 fs-5 fw-light" style="max-width: 650px;">
                             We invite visionaries, enterprise suppliers, and investment groups to synchronize operational objectives. Let’s co-create the future landscape.
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a href="#intakeForm" class="avorica-btn avorica-btn-outline justify-content-start">
-                                    Submit now <span class="dot"></span>
+                        <a href="#intakeform" class="avorica-btn avorica-btn-outline justify-content-start">
+                                    Join Us <span class="dot"></span>
                         </a>
                     </div>
                 </div>
@@ -117,7 +141,7 @@
     <!-- NEW SECTION: FIXED FULL BACKGROUND PARALLAX (NO CONTENT) -->
     <div class="parallax-divider-pure"></div>
 
-    <section id="intakeForm" class="form-section" style="background-image: url('images/bg-partner.png');">
+    <section id="intakeform" class="form-section" style="background-image: url('images/bg-partner.png');">
         <div class="container">
             <div class="row ">
                 <div class="col-xl-8 col-lg-8">

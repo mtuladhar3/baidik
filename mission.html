@@ -32,26 +32,51 @@
         </button>
 
         <div class="collapse navbar-collapse" id="avoricaNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">Who We Are</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="business.html">What We Do</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="partner.html">Partner With Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Media Coverage</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Who We Are
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="mission.html">Mission/Vision</a></li>
+                            <li><a class="dropdown-item" href="#.html">Organization Chart</a></li>
+                            <li><a class="dropdown-item" href="team.html">Management Team</a></li>
+                            <li><a class="dropdown-item" href="team.html">Boards Of Directors</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="business.html" id="whoWeAreDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            What We Do
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="business-category.html">Hydropower Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Real State Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Health Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Education Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Social Sector</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner.html">Partner With Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">Investor Relation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Media Coverage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
         </div>
     </nav>
 </header>
@@ -66,7 +91,7 @@
 
     <div class="alezon-content-layer">
         <div class="container">
-            <h2 class="alezon-main-title">Hydropower Projects</h2>
+            <h2 class="alezon-main-title">Mission/Vision</h2>
         </div>
     </div>
 </section>
@@ -78,14 +103,15 @@
             <!-- ROW 1: EDUCATION (Image Left, Text Right on Desktop) -->
             <div class="row bp-grid-row">
                 <div class="col-lg-6 p-0">
-                    <div class="bp-image-frame" style="background-image: url('https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?q=80&w=1200&auto=format&fit=crop');"></div>
+                    <div class="bp-image-frame" style="background-image: url('images/mission.png');"></div>
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="bp-text-container">
                         <h2 class="bp-block-title">Mission</h2>
                         <p class="bp-block-desc">
-                           Shivashree Hydropower Limited is a limited company registered and incorporated in Nepal under the company act 2063 having registered office at Buddhanagar, Kathmandu. The sole purpose of the company is serving the nation with clean energy by developing and operating hydropower projects in Nepal. The corporate office of the company is located at Buddhanagar, Kathmandu. The shares of this company is listed on NEPSE as SSHL on 6th Kartik 2077<br><br>
-                            The company received Generation license for Upper Chaku ‘A’ Hydroelectric Project for construction of the project with installed capacity 22.2 MW and concluded the Power Purchase Agreement with Nepal Electricity Authority (NEA) on 22nd Bhadra, 2067.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum magni suscipit modi quisquam, in ab voluptates dolorem iusto numquam cum provident quidem possimus rem ipsa sunt tempore non ratione inventore minima dolor cumque explicabo? Dicta cupiditate a maiores sit?
+                           <br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam esse hic maxime nam neque sequi officiis quas consectetur ipsam. Repellat accusamus voluptates corrupti minima ipsam enim, dignissimos pariatur culpa sequi.
                         </p>
                     </div>
                 </div>
@@ -94,15 +120,15 @@
             <!-- ROW 2: HEALTH (Text Left, Image Right on Desktop using flex-lg-row-reverse) -->
             <div class="row bp-grid-row flex-lg-row-reverse">
                 <div class="col-lg-6 p-0">
-                    <div class="bp-image-frame" style="background-image: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1200&auto=format&fit=crop');"></div>
+                    <div class="bp-image-frame" style="background-image: url('images/vision.png');"></div>
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="bp-text-container">
                         <h2 class="bp-block-title">Vision</h2>
                         <p class="bp-block-desc">
-                           Khani Khola Hydropower Was Established on BS 2069-06-17 under the Company act 2063. The Company was converted to Public Limited Company on BS 2069-12-14. The basic objective of the company to generate electricity. The Company is Located at 187 Shree Gorakhnath Marga, Dhumbaraki, Kathmandu -4.
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum magni suscipit modi quisquam, in ab voluptates dolorem iusto numquam cum provident quidem possimus rem ipsa sunt tempore non ratione inventore minima dolor cumque explicabo? Dicta cupiditate a maiores sit?
                            <br><br>
-                            The Company has developed developed Tungun – Thosne Hydropower (4.36 MW) and Khani Khola Hydropower (2 MW) at Sankhau, Bhattedanda and Ikudol of South Lalitpur.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam esse hic maxime nam neque sequi officiis quas consectetur ipsam. Repellat accusamus voluptates corrupti minima ipsam enim, dignissimos pariatur culpa sequi.
                         </p>
                     </div>
                 </div>

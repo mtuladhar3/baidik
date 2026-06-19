@@ -32,26 +32,51 @@
         </button>
 
         <div class="collapse navbar-collapse" id="avoricaNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">Who We Are</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="business.html">What We Do</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="partner.html">Partner With Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Media Coverage</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Who We Are
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="mission.html">Mission/Vision</a></li>
+                            <li><a class="dropdown-item" href="#.html">Organization Chart</a></li>
+                            <li><a class="dropdown-item" href="team.html">Management Team</a></li>
+                            <li><a class="dropdown-item" href="team.html">Boards Of Directors</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="business.html" id="whoWeAreDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            What We Do
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="business-category.html">Hydropower Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Real State Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Health Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Education Sector</a></li>
+                            <li><a class="dropdown-item" href="business-category.html">Social Sector</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner.html">Partner With Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">Investor Relation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Media Coverage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
         </div>
     </nav>
 </header>
@@ -78,7 +103,7 @@
                 <div class="row align-items-start">
 
                     <!-- Left Column: Sticky Title Header -->
-                    <div class="col-lg-3 col-md-4 nc-media-sticky-col">
+                    <div class="col-lg-3 col-md-3 nc-media-sticky-col">
                         <h2 class="nc-media-title">Our Business Area</h2>
                     </div>
 
@@ -100,54 +125,166 @@
 
         <section class="mosaic-section bg-white">
             <div class="container">
-                <div class="row gy-4">
+                <ul class="nav nav-pills custom-filter-tabs mb-5 justify-content-start border-0" id="sectorTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all-pane" type="button" role="tab" aria-selected="true">ALL INVESTMENTS</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="hydro-tab" data-bs-toggle="pill" data-bs-target="#hydro-pane" type="button" role="tab" aria-selected="false">HYDROPOWER SECTOR</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="real-estate-tab" data-bs-toggle="pill" data-bs-target="#real-estate-pane" type="button" role="tab" aria-selected="false">REAL ESTATE SECTOR</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="health-tab" data-bs-toggle="pill" data-bs-target="#health-pane" type="button" role="tab" aria-selected="false">HEALTH SECTOR</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="education-tab" data-bs-toggle="pill" data-bs-target="#education-pane" type="button" role="tab" aria-selected="false">EDUCATION SECTOR</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="social-tab" data-bs-toggle="pill" data-bs-target="#social-pane" type="button" role="tab" aria-selected="false">SOCIAL SECTOR</button>
+        </li>
+    </ul>
 
-                    <div class="col-12">
-
-                        <a href="business-category.html">
-                            <div class="mosaic-item long"
-                                style="background-image:  linear-gradient(to top, rgb(0 0 0 / 73%), rgb(10 20 50 / 0%)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop');">
-                                <div class="mosaic-content">
-                                    <h3>Hydropower Projects</h3>
-                                </div>
+    <!-- Tab Filter Content panes -->
+    <div class="tab-content" id="sectorTabsContent">
+        
+        <!-- PANE: ALL INVESTMENTS -->
+        <div class="tab-pane fade show active" id="all-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+            <div class="row gy-4">
+                <!-- Card 1 (Hydropower) -->
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <a href="business-detail.html" class="text-decoration-none text-dark">
+                            <div class="card-top-bar"></div>
+                            <div class="card-logo-area"><img src="images/1.png" alt="Logo"></div>
+                            <div class="card-body">
+                                <p class="card-title">Upper Tamakoshi Hydropower Project</p>
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-md-6">
-                        <a href="business-category.html">
-                            <div class="mosaic-item square"
-                                style="background-image:  linear-gradient(to top, rgb(0 0 0 / 73%), rgb(10 20 50 / 0%)), url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800&auto=format&fit=crop');">
-                                <div class="mosaic-content">
-                                    <h3>Banking & Finance</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-6">
-                        <a href="business-category.html">
-                            <div class="mosaic-item square"
-                            style="background-image:  linear-gradient(to top, rgb(0 0 0 / 73%), rgb(10 20 50 / 0%)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop');">
-                            <div class="mosaic-content">
-                                <h3>International Real Estate</h3>
-                            </div>
-                        </div>
-                        </a>
-                    </div>
-
-                    <div class="col-12">
-                        <a href="business-category.html">
-                            <div class="mosaic-item short"
-                            style="background-image:  linear-gradient(to top, rgb(0 0 0 / 73%), rgb(10 20 50 / 0%)), url('https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=1200&auto=format&fit=crop');">
-                            <div class="mosaic-content">
-                                <h3>Consumer Retail Trading</h3>
-                            </div>
-                        </div>
-                        </a>
-                    </div>
-
                 </div>
+                <!-- Card 2 (Real Estate) -->
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <a href="business-detail.html" class="text-decoration-none text-dark">
+                            <div class="card-top-bar"></div>
+                            <div class="card-logo-area"><img src="images/1.png" alt="Logo"></div>
+                            <div class="card-body">
+                                <p class="card-title">Kathmandu Central Residency</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 3 (Health) -->
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <a href="business-detail.html" class="text-decoration-none text-dark">
+                            <div class="card-top-bar"></div>
+                            <div class="card-logo-area"><img src="images/1.png" alt="Logo"></div>
+                            <div class="card-body">
+                                <p class="card-title">Advanced City Care Hospital</p>
+                               
+                                
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANE: HYDROPOWER SECTOR -->
+        <div class="tab-pane fade" id="hydro-pane" role="tabpanel" aria-labelledby="hydro-tab" tabindex="0">
+            <div class="row gy-4">
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <a href="business-detail.html" class="text-decoration-none text-dark">
+                            <div class="card-top-bar"></div>
+                            <div class="card-logo-area"><img src="images/1.png" alt="Logo"></div>
+                            <div class="card-body">
+                                <p class="card-title">Upper Tamakoshi Hydropower Project</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANE: REAL ESTATE SECTOR -->
+        <div class="tab-pane fade" id="real-estate-pane" role="tabpanel" aria-labelledby="real-estate-tab" tabindex="0">
+            <div class="row gy-4">
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <a href="business-detail.html" class="text-decoration-none text-dark">
+                            <div class="card-top-bar"></div>
+                            <div class="card-logo-area"><img src="images/1.png" alt="Logo"></div>
+                            <div class="card-body">
+                                <p class="card-title">Kathmandu Central Residency</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANE: HEALTH SECTOR -->
+        <div class="tab-pane fade" id="health-pane" role="tabpanel" aria-labelledby="health-tab" tabindex="0">
+            <div class="row gy-4">
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <a href="business-detail.html" class="text-decoration-none text-dark">
+                            <div class="card-top-bar"></div>
+                            <div class="card-logo-area"><img src="images/1.png" alt="Logo"></div>
+                            <div class="card-body">
+                                <p class="card-title">Advanced City Care Hospital</p>
+                               
+                                
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANE: EDUCATION SECTOR -->
+        <div class="tab-pane fade" id="education-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
+            <div class="row gy-4">
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <a href="business-detail.html" class="text-decoration-none text-dark">
+                            <div class="card-top-bar"></div>
+                            <div class="card-logo-area"><img src="images/1.png" alt="Logo"></div>
+                            <div class="card-body">
+                                <p class="card-title">National Tech University Campus</p>
+                                
+                                
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANE: SOCIAL SECTOR -->
+        <div class="tab-pane fade" id="social-pane" role="tabpanel" aria-labelledby="social-tab" tabindex="0">
+            <div class="row gy-4">
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <a href="business-detail.html" class="text-decoration-none text-dark">
+                            <div class="card-top-bar"></div>
+                            <div class="card-logo-area"><img src="images/1.png" alt="Logo"></div>
+                            <div class="card-body">
+                                <p class="card-title">Community Micro-Hydro Initiative</p>
+                                
+                                
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
             </div>
 
         </section>
